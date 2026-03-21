@@ -369,11 +369,11 @@ ul{list-style:none}
   .nav-brand-logo{width:32px;height:32px}
   .nav-brand-name{font-size:.7rem;letter-spacing:.05em}
   .nav-brand-title{font-size:.45rem;letter-spacing:.12em}
-  .hero{min-height:100svh}
-  .hero-bg img{object-position:85% center;transform:scale(1)} /* Changed from center 30% to shift focus and hide frame */
+  .hero{min-height:100svh; background-color: var(--c-text);} /* Fill empty space with solid dark background */
+  .hero-bg img{object-fit:contain; object-position:top;} /* Render true to size at the top */
   .hero-content{padding:0 1.5rem 3rem;padding-top:5rem;justify-content:flex-start;align-items:flex-end}
   .hero-text{text-align:left;max-width:100%}
-  .hero-bg::after{background:linear-gradient(to top,rgba(42,34,32,.95) 0%,rgba(42,34,32,.85) 55%,rgba(42,34,32,.4) 85%,rgba(42,34,32,.05) 100%)} /* Extended dark overlay for contrast */
+  .hero-bg::after{background:linear-gradient(to bottom, rgba(42,34,32,.4) 0%, rgba(42,34,32,.1) 15%, rgba(42,34,32,.9) 32%, var(--c-text) 40%, var(--c-text) 100%);} /* Smoothly blend image edge into background */
   .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:.55rem;letter-spacing:.25em}
   .hero-h1{font-size:clamp(1.6rem,5.5vw,2.2rem);line-height:1.3;margin-bottom:1.2rem}
   .hero-sub{font-size:.78rem;line-height:1.7;margin-bottom:2rem}
