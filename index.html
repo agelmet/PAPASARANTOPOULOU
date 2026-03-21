@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    
+    <title>Αγγελική-Ελευθερία Παπασαραντοπούλου | Ψυχολόγος</title>
+    <meta name="description" content="Δεν Είσαι το Πρόβλημά σου. Εδώ, Γράφουμε την Ιστορία σου από την Αρχή. Ψυχοθεραπεία με απόλυτη αποδοχή στην Αθήνα (Γκύζη) και Online.">
+    <meta name="author" content="Advon Media">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' font-family='serif' fill='%231a1a1a'>A</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pearl: '#FDFBF7',
+                        obsidian: '#1A1A1A',
+                        cashmere: '#E8E3DD',
+                        mink: '#8B7355',
+                        stone: '#D4CDC4'
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Montserrat', 'sans-serif'],
+                        signature: ['Alex Brush', 'cursive'],
+                    },
+                    animation: {
+                        'marquee': 'marquee 60s linear infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Base & Custom Cursor */
+        @media (pointer: fine) {
+            body { cursor: none; }
+            a, button, [onclick], input, textarea { cursor: none; }
+        }
+        
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #FDFBF7; }
+        ::-webkit-scrollbar-thumb { background: #8B7355; border-radius: 10px; }
+        ::selection { background: #8B7355; color: #FDFBF7; }
+
+        /* Smooth Custom Cursor Elements */
+        .cursor-dot {
+            position: fixed; top: 0; left: 0; width: 6px; height: 6px;
+            background-color: #1A1A1A; border-radius: 50%;
+            transform: translate(-50%, -50%); pointer-events: none; z-index: 9999;
+            transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+        }
+        .cursor-outline {
+            position: fixed; top: 0; left: 0; width: 36px; height: 36px;
+            border: 1px solid rgba(26, 26, 26, 0.3); border-radius: 50%;
+            transform: translate(-50%, -50%); pointer-events: none; z-index: 9998;
+            transition: width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+        }
+        .cursor-hover .cursor-dot { width: 45px; height: 45px; background-color: rgba(139, 115, 85, 0.1); mix-blend-mode: multiply; }
+        .cursor-hover .cursor-outline { width: 55px; height: 55px; border-color: transparent; }
+
+        /* Typography Elegance */
+        .text-stroke {
+            -webkit-text-stroke: 1px #1A1A1A; color: transparent;
+            transition: all 0.5s ease;
+        }
+        .text-stroke:hover { color: #1A1A1A; }
+
+        /* Reveal Animations */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-right { opacity: 0; transform: translateX(40px); transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal-right.active { opacity: 1; transform: translateX(0); }
+
+        /* Services Grid Accordion */
+        .service-accordion { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+        .service-row:hover .service-accordion { grid-template-rows: 1fr; }
+        .service-accordion > div { overflow: hidden; }
+
+        /* Fog Overlay for Hero */
+        .hero-fog {
+            background: linear-gradient(to left, rgba(253, 251, 247, 1) 0%, rgba(253, 251, 247, 0.9) 30%, rgba(253, 251, 247, 0.4) 60%, rgba(253, 251, 247, 0) 100%);
+        }
+        @media (max-width: 768px) {
+            .hero-fog {
+                background: linear-gradient(to top, rgba(253, 251, 247, 1) 0%, rgba(253, 251, 247, 0.9) 50%, rgba(253, 251, 247, 0.2) 100%);
+            }
+        }
+
+        /* Masonry Gallery Setup */
+        .masonry { column-count: 1; column-gap: 1.5rem; }
+        @media (min-width: 640px) { .masonry { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry { column-count: 3; } }
+        .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body class="bg-pearl text-obsidian font-sans antialiased overflow-x-hidden selection:bg-mink selection:text-pearl">
+
+    <div class="cursor-dot hidden md:block"></div>
+    <div class="cursor-outline hidden md:block"></div>
+
+    <nav class="fixed top-0 w-full z-50 transition-all duration-500 bg-pearl/80 backdrop-blur-xl border-b border-obsidian/5" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="hover-trigger relative z-50 flex flex-col">
+                <span class="font-signature text-3xl md:text-4xl leading-none text-obsidian tracking-wide">Αγγελική Παπασαραντοπούλου</span>
+                <span class="font-sans text-[9px] tracking-[0.3em] text-mink uppercase mt-1">Ψυχολόγος, MSc</span>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-10 text-[10px] tracking-[0.2em] font-medium uppercase">
+                <a href="#about" class="hover-trigger relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-mink after:transition-all hover:after:w-full">Προφίλ</a>
+                <a href="#services" class="hover-trigger relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-mink after:transition-all hover:after:w-full">Προσέγγιση & Υπηρεσίες</a>
+                <a href="#space" class="hover-trigger relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-mink after:transition-all hover:after:w-full">Ο Χώρος</a>
+                <a href="#reviews" class="hover-trigger relative after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-mink after:transition-all hover:after:w-full">Αξιολογήσεις</a>
+                <a href="#contact" class="hover-trigger bg-obsidian text-pearl px-6 py-3 rounded-none hover:bg-mink transition-colors">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="hover-trigger lg:hidden z-50 text-obsidian w-10 h-10 flex flex-col justify-center items-end gap-1.5">
+                <span class="w-6 h-px bg-obsidian transition-all duration-300 origin-right" id="line1"></span>
+                <span class="w-4 h-px bg-obsidian transition-all duration-300 origin-right" id="line2"></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-pearl z-40 transform translate-y-full transition-transform duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] flex flex-col items-center justify-center space-y-8 h-[100dvh] w-screen">
+            <a href="#about" class="text-2xl font-serif text-obsidian uppercase tracking-widest mobile-link opacity-0 transform translate-y-10 transition-all duration-500 delay-100">Προφίλ</a>
+            <a href="#services" class="text-2xl font-serif text-obsidian uppercase tracking-widest mobile-link opacity-0 transform translate-y-10 transition-all duration-500 delay-200">Υπηρεσίες</a>
+            <a href="#space" class="text-2xl font-serif text-obsidian uppercase tracking-widest mobile-link opacity-0 transform translate-y-10 transition-all duration-500 delay-300">Ο Χώρος</a>
+            <a href="#faq" class="text-2xl font-serif text-obsidian uppercase tracking-widest mobile-link opacity-0 transform translate-y-10 transition-all duration-500 delay-400">Ερωτήσεις</a>
+            <a href="#contact" class="text-2xl font-serif text-mink uppercase tracking-widest mobile-link opacity-0 transform translate-y-10 transition-all duration-500 delay-500">Επικοινωνία</a>
+        </div>
+    </nav>
+
+    <header class="relative w-full h-[100dvh] flex items-end md:items-center justify-end overflow-hidden bg-cashmere">
+        <div class="absolute inset-0 z-0">
+            <img src="https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag2.jpg" alt="Γραφείο Ψυχολόγου" class="w-full h-full object-cover object-left md:object-center">
+            <div class="absolute inset-0 hero-fog z-10 pointer-events-none"></div>
+        </div>
+
+        <div class="relative z-20 w-full md:w-1/2 lg:w-5/12 px-6 pb-20 md:pb-0 md:pr-12 lg:pr-24 flex flex-col items-start md:items-end text-left md:text-right">
+            <div class="reveal-right">
+                <span class="text-[9px] md:text-[10px] tracking-[0.4em] font-sans text-mink mb-6 block uppercase font-semibold">
+                    ΑΣΦΑΛΗΣ ΧΩΡΟΣ ΘΕΡΑΠΕΙΑΣ
+                </span>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif leading-[1.1] text-obsidian uppercase mb-6">
+                    Δεν Είσαι το <br>
+                    <span class="text-stroke">Πρόβλημά</span> σου.
+                </h1>
+                
+                <p class="text-lg md:text-2xl font-serif italic text-obsidian/80 mb-8">
+                    Εδώ, γράφουμε την ιστορία σου από την αρχή.
+                </p>
+
+                <p class="text-sm font-light text-obsidian/70 leading-relaxed mb-10 max-w-md ml-auto">
+                    Ψυχοθεραπεία με απόλυτη αποδοχή, μηδενική επίκριση και επιστημονική εξειδίκευση — σε έναν χώρο όπου ακόμα και το κατοικίδιό σου είναι ευπρόσδεκτο.
+                </p>
+                
+                <a href="#contact" class="hover-trigger inline-flex items-center gap-4 bg-obsidian text-pearl px-8 py-4 text-xs tracking-widest uppercase hover:bg-mink transition-all duration-500 group">
+                    <span>Κλείστε την Πρώτη Συνεδρία</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-2 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-32 bg-pearl relative z-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+                
+                <div class="w-full lg:w-5/12 reveal">
+                    <div class="relative w-full aspect-[4/5] bg-cashmere overflow-hidden group hover-trigger">
+                        <div class="absolute inset-0 bg-mink/10 mix-blend-multiply z-10 transition-opacity duration-700 group-hover:opacity-0 pointer-events-none"></div>
+                        <img src="https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag1.jpg" alt="Αγγελική-Ελευθερία Παπασαραντοπούλου" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-1000 animate-float">
+                        <div class="absolute bottom-6 left-6 z-20">
+                            <p class="text-[10px] tracking-[0.2em] text-pearl uppercase bg-obsidian/80 backdrop-blur px-4 py-2">ΑΓΓΕΛΙΚΗ-ΕΛΕΥΘΕΡΙΑ ΠΑΠΑΣΑΡΑΝΤΟΠΟΥΛΟΥ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-7/12 space-y-8 text-obsidian/80 font-light text-base md:text-lg leading-relaxed">
+                    <div class="reveal">
+                        <span class="text-[10px] tracking-[0.3em] font-sans text-mink uppercase block mb-4">ΓΝΩΡΙΣΤΕ ΜΕ</span>
+                        <h2 class="text-3xl md:text-5xl font-serif text-obsidian mb-8">
+                            «Ο άνθρωπος και το πρόβλημά του είναι <span class="italic text-mink">δύο εντελώς διαφορετικά</span> πράγματα.»
+                        </h2>
+                    </div>
+
+                    <p class="reveal delay-100">
+                        Στόχος μου δεν είναι να σου βάλω ταμπέλες, αλλά να σε βοηθήσω να "ξαναγράψεις" την ιστορία της ζωής σου, βρίσκοντας πρακτικές λύσεις και ανακτώντας τον έλεγχο.
+                    </p>
+                    
+                    <p class="reveal delay-200">
+                        Ως αδειούχος Ψυχολόγος (Ε.Κ.Π.Α., HND in Counselling and Psychology), προσεγγίζω την ψυχοθεραπεία μέσα από το πρίσμα των Μεταμοντέρνων Συστημικών Προσεγγίσεων (Αφηγηματική, Διαλογική, Εστιασμένη στη Λύση). Όμως, αυτό που διαμορφώνει τον πυρήνα της δουλειάς μου στο ιδιωτικό μου γραφείο στου Γκύζη, είναι η επαφή μου με τα πιο απαιτητικά κομμάτια της ανθρώπινης εμπειρίας.
+                    </p>
+
+                    <div class="reveal delay-300 p-8 border-l-2 border-mink bg-cashmere/30 mt-8">
+                        <p class="italic">
+                            Με Μεταπτυχιακό (ΜΑ) στην Εγκληματολογική Ψυχολογία και συνεχιζόμενες σπουδές (MSc) στην Ψυχιατροδικαστική της Ιατρικής Σχολής Αθηνών, έχω εκπαιδευτεί να διαχειρίζομαι το βαρύ τραύμα, τις εξαρτήσεις και την παραβατικότητα.
+                        </p>
+                        <p class="mt-4 font-medium text-obsidian">
+                            Η διετής εργασία μου στον Σύλλογο "Ο Ονήσιμος" με δίδαξε την πιο σημαντική αρχή: την απόλυτη, αδιαπραγμάτευτη αποδοχή χωρίς ίχνος κριτικής. Ό,τι κι αν κουβαλάς, εδώ είναι ασφαλές να το ακουμπήσεις.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 bg-obsidian text-pearl">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-20 reveal">
+                <span class="text-[10px] tracking-[0.3em] font-sans text-mink block mb-4 uppercase">ΠΩΣ ΜΠΟΡΟΥΜΕ ΝΑ ΔΟΥΛΕΨΟΥΜΕ ΜΑΖΙ</span>
+                <h2 class="text-4xl md:text-6xl font-serif uppercase">ΥΠΗΡΕΣΙΕΣ</h2>
+            </div>
+
+            <div class="border-t border-pearl/20 flex flex-col">
+                
+                <div class="group service-row border-b border-pearl/20 relative overflow-hidden cursor-none reveal">
+                    <div class="absolute inset-0 bg-cashmere translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
+                    <div class="relative z-10 py-10 px-4 md:px-8 transition-colors duration-500 group-hover:text-obsidian">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-2xl md:text-4xl font-serif uppercase">ΑΓΧΟΣ, ΚΡΙΣΕΙΣ ΠΑΝΙΚΟΥ & ΚΑΤΑΘΛΙΨΗ</h3>
+                            <i data-lucide="plus" class="w-6 h-6 opacity-60 group-hover:rotate-45 transition-transform duration-500"></i>
+                        </div>
+                        <div class="service-accordion">
+                            <div class="pt-6">
+                                <p class="font-light leading-relaxed opacity-90 text-sm md:text-base max-w-3xl">
+                                    <strong>Από το "Γιατί" στο "Πώς":</strong> Διαθέτοντας πάνω από 5 χρόνια ειδικής εμπειρίας, δεν μένουμε μόνο στην ανάλυση του παρελθόντος. Μέσα από τη Θεραπεία Εστιασμένη στη Λύση, εντοπίζουμε τα ψυχοσωματικά συμπτώματα και βρίσκουμε άμεσα, λειτουργικά εργαλεία για να ανακουφιστείς και να επιστρέψεις στη ζωή σου.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group service-row border-b border-pearl/20 relative overflow-hidden cursor-none reveal">
+                    <div class="absolute inset-0 bg-cashmere translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
+                    <div class="relative z-10 py-10 px-4 md:px-8 transition-colors duration-500 group-hover:text-obsidian">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-2xl md:text-4xl font-serif uppercase">ΤΡΑΥΜΑ, ΕΞΑΡΤΗΣΕΙΣ & ΣΥΜΠΕΡΙΦΟΡΕΣ</h3>
+                            <i data-lucide="plus" class="w-6 h-6 opacity-60 group-hover:rotate-45 transition-transform duration-500"></i>
+                        </div>
+                        <div class="service-accordion">
+                            <div class="pt-6">
+                                <p class="font-light leading-relaxed opacity-90 text-sm md:text-base max-w-3xl">
+                                    <strong>Safe Space:</strong> Αξιοποιώντας το εξειδικευμένο υπόβαθρό μου στην Εγκληματολογική Ψυχολογία, παρέχω ένα απόλυτα ασφαλές πλαίσιο για ζητήματα "ταμπού". Δουλεύουμε με κάθε μορφή εξάρτησης, τη διαχείριση θυμού, την παραβατικότητα, καθώς και την επούλωση από εμπειρίες κακοποίησης.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group service-row border-b border-pearl/20 relative overflow-hidden cursor-none reveal">
+                    <div class="absolute inset-0 bg-cashmere translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
+                    <div class="relative z-10 py-10 px-4 md:px-8 transition-colors duration-500 group-hover:text-obsidian">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-2xl md:text-4xl font-serif uppercase">ΣΧΕΣΕΙΣ, ΟΙΚΟΓΕΝΕΙΑ & ΠΑΙΔΙ</h3>
+                            <i data-lucide="plus" class="w-6 h-6 opacity-60 group-hover:rotate-45 transition-transform duration-500"></i>
+                        </div>
+                        <div class="service-accordion">
+                            <div class="pt-6">
+                                <p class="font-light leading-relaxed opacity-90 text-sm md:text-base max-w-3xl">
+                                    Η οικογένεια είναι ένα σύστημα και όταν ένα μέλος πονάει, επηρεάζονται όλοι. Υποστηρίζω γονείς, ζευγάρια, παιδιά (έως 12 ετών) και εφήβους. Μέσα από τη Διαλογική προσέγγιση, μαθαίνουμε να επικοινωνούμε ουσιαστικά και χτίζουμε ξανά γέφυρες σεβασμού.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="group service-row border-b border-pearl/20 relative overflow-hidden cursor-none reveal">
+                    <div class="absolute inset-0 bg-cashmere translate-y-[101%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out"></div>
+                    <div class="relative z-10 py-10 px-4 md:px-8 transition-colors duration-500 group-hover:text-obsidian">
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-2xl md:text-4xl font-serif uppercase">ΕΙΚΑΣΤΙΚΗ ΘΕΡΑΠΕΙΑ & ΕΙΔΙΚΕΣ ΠΑΡΟΧΕΣ</h3>
+                            <i data-lucide="plus" class="w-6 h-6 opacity-60 group-hover:rotate-45 transition-transform duration-500"></i>
+                        </div>
+                        <div class="service-accordion">
+                            <div class="pt-6">
+                                <p class="font-light leading-relaxed opacity-90 text-sm md:text-base max-w-3xl">
+                                    Όταν οι λέξεις δεν φτάνουν, η τέχνη δίνει διέξοδο (Art Therapy). Παράλληλα, αναλαμβάνω τη σύνταξη Τεχνικών Εκθέσεων και Βεβαιώσεων Ψυχικής Υγείας. Παρέχονται online συνεδρίες και ειδική τιμολογιακή πολιτική για ανέργους.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="space" class="py-32 bg-pearl">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-20 reveal">
+                <span class="text-[10px] tracking-[0.3em] font-sans text-mink uppercase block mb-4">ΕΝΑ PET-FRIENDLY ΚΑΤΑΦΥΓΙΟ</span>
+                <h2 class="text-4xl md:text-6xl font-serif text-obsidian uppercase">Ο ΧΩΡΟΣ ΜΑΣ</h2>
+                <p class="mt-6 text-sm md:text-base font-light text-obsidian/70 max-w-2xl mx-auto">
+                    Γνωρίζω πόσο αγχωτική είναι η έναρξη της θεραπείας. Ο χώρος είναι σχεδιασμένος για να προσφέρει ηρεμία. Ο σκύλος ή η γάτα σου δεν είναι απλώς ευπρόσδεκτα—είναι μέρος της ασφάλειας που θέλω να νιώθεις εδώ.
+                </p>
+            </div>
+
+            <div class="masonry reveal delay-200">
+                <div class="masonry-item hover-trigger cursor-pointer group relative" onclick="openModal('https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag3.jpg')">
+                    <div class="absolute inset-0 bg-obsidian/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="text-pearl w-8 h-8"></i>
+                    </div>
+                    <img src="https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag3.jpg" class="w-full h-auto object-contain bg-cashmere/20" alt="Χώρος Γραφείου">
+                </div>
+                <div class="masonry-item hover-trigger cursor-pointer group relative" onclick="openModal('https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag4.jpg')">
+                    <div class="absolute inset-0 bg-obsidian/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"><i data-lucide="zoom-in" class="text-pearl w-8 h-8"></i></div>
+                    <img src="https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag4.jpg" class="w-full h-auto object-contain bg-cashmere/20" alt="Χώρος Γραφείου">
+                </div>
+                <div class="masonry-item hover-trigger cursor-pointer group relative" onclick="openModal('https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag5.jpg')">
+                    <div class="absolute inset-0 bg-obsidian/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"><i data-lucide="zoom-in" class="text-pearl w-8 h-8"></i></div>
+                    <img src="https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag5.jpg" class="w-full h-auto object-contain bg-cashmere/20" alt="Χώρος Γραφείου">
+                </div>
+                <div class="masonry-item hover-trigger cursor-pointer group relative" onclick="openModal('https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag6.jpg')">
+                    <div class="absolute inset-0 bg-obsidian/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"><i data-lucide="zoom-in" class="text-pearl w-8 h-8"></i></div>
+                    <img src="https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag6.jpg" class="w-full h-auto object-contain bg-cashmere/20" alt="Χώρος Γραφείου">
+                </div>
+                <div class="masonry-item hover-trigger cursor-pointer group relative" onclick="openModal('https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag7.jpg')">
+                    <div class="absolute inset-0 bg-obsidian/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"><i data-lucide="zoom-in" class="text-pearl w-8 h-8"></i></div>
+                    <img src="https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag7.jpg" class="w-full h-auto object-contain bg-cashmere/20" alt="Χώρος Γραφείου">
+                </div>
+                <div class="masonry-item hover-trigger cursor-pointer group relative" onclick="openModal('https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag8.jpg')">
+                    <div class="absolute inset-0 bg-obsidian/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"><i data-lucide="zoom-in" class="text-pearl w-8 h-8"></i></div>
+                    <img src="https://raw.githubusercontent.com/agelmet/PAPASARANTOPOULOU/main/ag8.jpg" class="w-full h-auto object-contain bg-cashmere/20" alt="Χώρος Γραφείου">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-32 bg-cashmere text-obsidian relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-5 lg:sticky lg:top-32 h-fit reveal">
+                     <span class="text-[10px] tracking-[0.3em] font-sans uppercase text-mink block mb-6">ΛΥΝΟΝΤΑΣ ΑΠΟΡΙΕΣ</span>
+                     <h2 class="text-4xl md:text-6xl font-serif uppercase leading-[1.1]">ΣΥΧΝΕΣ<br>ΕΡΩΤΗΣΕΙΣ</h2>
+                     <p class="mt-8 text-sm md:text-base font-light text-obsidian/70 leading-relaxed max-w-sm">
+                        Είναι φυσιολογικό να υπάρχουν ερωτήματα πριν σηκώσετε το τηλέφωνο. Εδώ θα βρείτε κάποιες βασικές απαντήσεις για το πλαίσιο της συνεργασίας μας.
+                     </p>
+                </div>
+                
+                <div class="lg:col-span-7 space-y-2 reveal delay-200">
+                    <div class="border-t border-obsidian/20">
+                        <button class="hover-trigger w-full flex justify-between items-center py-8 text-left group focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="text-xl md:text-2xl font-serif text-obsidian group-hover:translate-x-2 transition-transform duration-300">Τι να περιμένω στην πρώτη συνεδρία;</span>
+                            <i data-lucide="chevron-down" class="text-mink transition-transform duration-500 icon-arrow"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out faq-content">
+                             <p class="pb-8 text-sm md:text-base font-light text-obsidian/80 leading-relaxed pr-8">
+                                Η πρώτη συνάντηση είναι αναγνωριστική. Είναι η ευκαιρία μας να γνωριστούμε, να ακούσω τι σας απασχολεί χωρίς καμία πίεση και να συζητήσουμε αν και πώς μπορώ να σας βοηθήσω. Δεν χρειάζεται να τα πείτε όλα με την πρώτη φορά.
+                             </p>
+                        </div>
+                    </div>
+                    <div class="border-t border-obsidian/20">
+                        <button class="hover-trigger w-full flex justify-between items-center py-8 text-left group focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="text-xl md:text-2xl font-serif text-obsidian group-hover:translate-x-2 transition-transform duration-300">Πόσο καιρό διαρκεί η θεραπεία;</span>
+                            <i data-lucide="chevron-down" class="text-mink transition-transform duration-500 icon-arrow"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out faq-content">
+                             <p class="pb-8 text-sm md:text-base font-light text-obsidian/80 leading-relaxed pr-8">
+                                Αυτό εξαρτάται από το αίτημα. Επειδή χρησιμοποιώ συχνά τη "Θεραπεία Εστιασμένη στη Λύση", σε ορισμένες περιπτώσεις κρίσεων άγχους, η ανακούφιση μπορεί να έρθει γρήγορα. Για πιο σύνθετα ζητήματα τραύματος, δίνουμε τον χρόνο που χρειάζεται ο δικός σας ρυθμός.
+                             </p>
+                        </div>
+                    </div>
+                    <div class="border-t border-obsidian/20">
+                        <button class="hover-trigger w-full flex justify-between items-center py-8 text-left group focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="text-xl md:text-2xl font-serif text-obsidian group-hover:translate-x-2 transition-transform duration-300">Πώς ακριβώς λειτουργεί το "Pet-Friendly" γραφείο;</span>
+                            <i data-lucide="chevron-down" class="text-mink transition-transform duration-500 icon-arrow"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out faq-content">
+                             <p class="pb-8 text-sm md:text-base font-light text-obsidian/80 leading-relaxed pr-8">
+                                Πολύ απλά: μπορείτε να φέρετε το ζωάκι σας μαζί σας! Ξέρουμε ότι η παρουσία του κατοικιδίου σας ρίχνει τα επίπεδα άγχους. Το γραφείο είναι διαμορφωμένο ώστε να είναι ασφαλές γι' αυτά. Απλώς ενημερώστε με κατά το κλείσιμο του ραντεβού.
+                             </p>
+                        </div>
+                    </div>
+                    <div class="border-t border-obsidian/20">
+                        <button class="hover-trigger w-full flex justify-between items-center py-8 text-left group focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="text-xl md:text-2xl font-serif text-obsidian group-hover:translate-x-2 transition-transform duration-300">Κάνετε online συνεδρίες;</span>
+                            <i data-lucide="chevron-down" class="text-mink transition-transform duration-500 icon-arrow"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out faq-content">
+                             <p class="pb-8 text-sm md:text-base font-light text-obsidian/80 leading-relaxed pr-8">
+                                Ναι. Αν μένετε εκτός Αθηνών, αν ο χρόνος σας είναι περιορισμένος ή αν απλώς νιώθετε πιο ασφαλείς στον δικό σας χώρο, οι συνεδρίες μπορούν να γίνουν διαδικτυακά με την ίδια αποτελεσματικότητα.
+                             </p>
+                        </div>
+                    </div>
+                    <div class="border-y border-obsidian/20">
+                        <button class="hover-trigger w-full flex justify-between items-center py-8 text-left group focus:outline-none" onclick="toggleFaq(this)">
+                            <span class="text-xl md:text-2xl font-serif text-obsidian group-hover:translate-x-2 transition-transform duration-300">Αναλαμβάνετε περιπτώσεις παραβατικότητας;</span>
+                            <i data-lucide="chevron-down" class="text-mink transition-transform duration-500 icon-arrow"></i>
+                        </button>
+                        <div class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out faq-content">
+                             <p class="pb-8 text-sm md:text-base font-light text-obsidian/80 leading-relaxed pr-8">
+                                Λόγω της εξειδίκευσής μου στην Εγκληματολογική Ψυχολογία, παρέχω υποστήριξη σε εφήβους ή ενήλικες που έχουν εμπλακεί σε παραβατικές συμπεριφορές, καθώς και σε θύματα αυτών. Η προσέγγιση είναι θεραπευτική, απολύτως εμπιστευτική και δεν έχει δικαστικό χαρακτήρα.
+                             </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-32 bg-pearl overflow-hidden relative border-t border-obsidian/5">
+        <div class="max-w-7xl mx-auto px-6 mb-16 text-center reveal">
+            <span class="text-[10px] tracking-[0.3em] font-sans text-mink block mb-4 uppercase">Η ΦΩΝΗ ΤΩΝ ΑΝΘΡΩΠΩΝ ΜΟΥ</span>
+            <h2 class="text-4xl md:text-6xl font-serif uppercase text-obsidian">50+ ΑΡΙΣΤΕΣ ΑΞΙΟΛΟΓΗΣΕΙΣ</h2>
+        </div>
+
+        <div class="relative w-full flex overflow-hidden py-10 hover-trigger">
+            <div class="absolute left-0 top-0 w-16 md:w-32 h-full bg-gradient-to-r from-pearl to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 w-16 md:w-32 h-full bg-gradient-to-l from-pearl to-transparent z-10 pointer-events-none"></div>
+
+            <div class="flex animate-marquee w-max hover:[animation-play-state:paused]">
+                <div class="flex gap-6 px-3">
+                    
+                    <div class="w-[350px] md:w-[450px] bg-white border border-obsidian/10 p-8 flex flex-col justify-between shrink-0 shadow-sm">
+                        <div>
+                            <div class="flex justify-between items-center mb-6 border-b border-obsidian/10 pb-4">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-2xl font-serif text-obsidian">10.0</span>
+                                    <span class="text-[#f59e0b] text-sm tracking-widest">★★★★★</span>
+                                </div>
+                                <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-5 opacity-60">
+                            </div>
+                            <p class="text-obsidian/80 font-light text-sm italic leading-relaxed mb-6">"Η Αγγελική στο γραφείο της με έχει βοηθήσει να κάνω σημαντικά βήματα στη ζωή μου. Ο χώρος είναι πολύ φιλικός... ένιωσα ότι με καταλαβαίνει πραγματικά και ότι μπορώ να μιλήσω για οτιδήποτε χωρίς κρίση."</p>
+                        </div>
+                        <div class="flex justify-between items-end text-[9px] text-mink font-sans tracking-widest uppercase">
+                            <span>Ευαγγελία</span><span>12 ΜΑΡ 2026</span>
+                        </div>
+                    </div>
+
+                    <div class="w-[350px] md:w-[450px] bg-white border border-obsidian/10 p-8 flex flex-col justify-between shrink-0 shadow-sm">
+                        <div>
+                            <div class="flex justify-between items-center mb-6 border-b border-obsidian/10 pb-4">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-2xl font-serif text-obsidian">5.0</span>
+                                    <span class="text-[#f59e0b] text-sm tracking-widest">★★★★★</span>
+                                </div>
+                                <svg class="w-5 h-5 opacity-60" viewBox="0 0 24 24"><path fill="currentColor" d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"/></svg>
+                            </div>
+                            <p class="text-obsidian/80 font-light text-sm italic leading-relaxed mb-6">"Εδώ και 5 μήνες με χει αναλάβει... Είναι πολύ ήρεμη και καταλαβαίνει τα πάντα!! Ασχολείται πολύ βαθιά με το κάθε πρόβλημα και φτάνει πάντα στην ρίζα."</p>
+                        </div>
+                        <div class="flex justify-between items-end text-[9px] text-mink font-sans tracking-widest uppercase">
+                            <span>Giorgos Panagiotopoulos</span><span>GOOGLE REVIEW</span>
+                        </div>
+                    </div>
+
+                    <div class="w-[350px] md:w-[450px] bg-white border border-obsidian/10 p-8 flex flex-col justify-between shrink-0 shadow-sm">
+                        <div>
+                            <div class="flex justify-between items-center mb-6 border-b border-obsidian/10 pb-4">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-2xl font-serif text-obsidian">10.0</span>
+                                    <span class="text-[#f59e0b] text-sm tracking-widest">★★★★★</span>
+                                </div>
+                                <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-5 opacity-60">
+                            </div>
+                            <p class="text-obsidian/80 font-light text-sm italic leading-relaxed mb-6">"Συνάντησα μια επιστήμονα, άρτια κατηρτισμένη στην ειδικότητά της, πολύ περισσότερο όμως, έναν Άνθρωπο με μια σπάνια αμεσότητα, απλότητα, και ειλικρίνεια."</p>
+                        </div>
+                        <div class="flex justify-between items-end text-[9px] text-mink font-sans tracking-widest uppercase">
+                            <span>ΚΩΝΣΤΑΝΤΙΝΟΣ</span><span>06 ΙΑΝ 2025</span>
+                        </div>
+                    </div>
+
+                    <div class="w-[350px] md:w-[450px] bg-white border border-obsidian/10 p-8 flex flex-col justify-between shrink-0 shadow-sm">
+                        <div>
+                            <div class="flex justify-between items-center mb-6 border-b border-obsidian/10 pb-4">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-2xl font-serif text-obsidian">5.0</span>
+                                    <span class="text-[#f59e0b] text-sm tracking-widest">★★★★★</span>
+                                </div>
+                                <svg class="w-5 h-5 opacity-60" viewBox="0 0 24 24"><path fill="currentColor" d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"/></svg>
+                            </div>
+                            <p class="text-obsidian/80 font-light text-sm italic leading-relaxed mb-6">"Είμαι πραγματικά ευγνώμων που γνώρισα την Αγγελική... Εκπέμπει μια απίστευτη ζεστασιά και σου εμπνέει εμπιστοσύνη από την πρώτη στιγμή. Η παρουσία της μου έχει αλλάξει την ζωή."</p>
+                        </div>
+                        <div class="flex justify-between items-end text-[9px] text-mink font-sans tracking-widest uppercase">
+                            <span>Alexandros Skoularikas</span><span>GOOGLE REVIEW</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex gap-6 px-3">
+                    <div class="w-[350px] md:w-[450px] bg-white border border-obsidian/10 p-8 flex flex-col justify-between shrink-0 shadow-sm">
+                        <div>
+                            <div class="flex justify-between items-center mb-6 border-b border-obsidian/10 pb-4">
+                                <div class="flex items-baseline gap-2"><span class="text-2xl font-serif text-obsidian">10.0</span><span class="text-[#f59e0b] text-sm tracking-widest">★★★★★</span></div>
+                                <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-5 opacity-60">
+                            </div>
+                            <p class="text-obsidian/80 font-light text-sm italic leading-relaxed mb-6">"Η Αγγελική στο γραφείο της με έχει βοηθήσει να κάνω σημαντικά βήματα στη ζωή μου. Ο χώρος είναι πολύ φιλικός... ένιωσα ότι με καταλαβαίνει πραγματικά και ότι μπορώ να μιλήσω για οτιδήποτε χωρίς κρίση."</p>
+                        </div>
+                        <div class="flex justify-between items-end text-[9px] text-mink font-sans tracking-widest uppercase"><span>Ευαγγελία</span><span>12 ΜΑΡ 2026</span></div>
+                    </div>
+                    <div class="w-[350px] md:w-[450px] bg-white border border-obsidian/10 p-8 flex flex-col justify-between shrink-0 shadow-sm">
+                        <div>
+                            <div class="flex justify-between items-center mb-6 border-b border-obsidian/10 pb-4">
+                                <div class="flex items-baseline gap-2"><span class="text-2xl font-serif text-obsidian">5.0</span><span class="text-[#f59e0b] text-sm tracking-widest">★★★★★</span></div>
+                                <svg class="w-5 h-5 opacity-60" viewBox="0 0 24 24"><path fill="currentColor" d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"/></svg>
+                            </div>
+                            <p class="text-obsidian/80 font-light text-sm italic leading-relaxed mb-6">"Εδώ και 5 μήνες με χει αναλάβει... Είναι πολύ ήρεμη και καταλαβαίνει τα πάντα!! Ασχολείται πολύ βαθιά με το κάθε πρόβλημα και φτάνει πάντα στην ρίζα."</p>
+                        </div>
+                        <div class="flex justify-between items-end text-[9px] text-mink font-sans tracking-widest uppercase"><span>Giorgos Panagiotopoulos</span><span>GOOGLE REVIEW</span></div>
+                    </div>
+                    <div class="w-[350px] md:w-[450px] bg-white border border-obsidian/10 p-8 flex flex-col justify-between shrink-0 shadow-sm">
+                        <div>
+                            <div class="flex justify-between items-center mb-6 border-b border-obsidian/10 pb-4">
+                                <div class="flex items-baseline gap-2"><span class="text-2xl font-serif text-obsidian">10.0</span><span class="text-[#f59e0b] text-sm tracking-widest">★★★★★</span></div>
+                                <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-5 opacity-60">
+                            </div>
+                            <p class="text-obsidian/80 font-light text-sm italic leading-relaxed mb-6">"Συνάντησα μια επιστήμονα, άρτια κατηρτισμένη στην ειδικότητά της, πολύ περισσότερο όμως, έναν Άνθρωπο με μια σπάνια αμεσότητα, απλότητα, και ειλικρίνεια."</p>
+                        </div>
+                        <div class="flex justify-between items-end text-[9px] text-mink font-sans tracking-widest uppercase"><span>ΚΩΝΣΤΑΝΤΙΝΟΣ</span><span>06 ΙΑΝ 2025</span></div>
+                    </div>
+                    <div class="w-[350px] md:w-[450px] bg-white border border-obsidian/10 p-8 flex flex-col justify-between shrink-0 shadow-sm">
+                        <div>
+                            <div class="flex justify-between items-center mb-6 border-b border-obsidian/10 pb-4">
+                                <div class="flex items-baseline gap-2"><span class="text-2xl font-serif text-obsidian">5.0</span><span class="text-[#f59e0b] text-sm tracking-widest">★★★★★</span></div>
+                                <svg class="w-5 h-5 opacity-60" viewBox="0 0 24 24"><path fill="currentColor" d="M12.24 10.285V14.4h6.806c-.275 1.765-2.056 5.174-6.806 5.174-4.095 0-7.439-3.389-7.439-7.574s3.345-7.574 7.439-7.574c2.33 0 3.891.989 4.785 1.849l3.254-3.138C18.189 1.186 15.479 0 12.24 0c-6.635 0-12 5.365-12 12s5.365 12 12 12c6.926 0 11.52-4.869 11.52-11.726 0-.788-.085-1.39-.189-1.989H12.24z"/></svg>
+                            </div>
+                            <p class="text-obsidian/80 font-light text-sm italic leading-relaxed mb-6">"Είμαι πραγματικά ευγνώμων που γνώρισα την Αγγελική... Εκπέμπει μια απίστευτη ζεστασιά και σου εμπνέει εμπιστοσύνη από την πρώτη στιγμή. Η παρουσία της μου έχει αλλάξει την ζωή."</p>
+                        </div>
+                        <div class="flex justify-between items-end text-[9px] text-mink font-sans tracking-widest uppercase"><span>Alexandros Skoularikas</span><span>GOOGLE REVIEW</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" class="hover-trigger inline-flex items-center gap-3 text-sm font-sans uppercase tracking-widest text-obsidian hover:text-mink transition-colors border-b border-obsidian pb-1">
+                    ΔΙΑΒΑΣΤΕ ΟΛΕΣ ΤΙΣ ΚΡΙΤΙΚΕΣ <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-obsidian text-pearl pt-32 pb-10 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 reveal">
+            <div class="text-center md:text-left mb-20 border-b border-pearl/10 pb-16">
+                <h2 class="text-[10vw] md:text-[6vw] font-serif uppercase leading-[0.9] mb-8 hover-trigger text-pearl">ΕΠΙΚΟΙΝΩΝΙΑ</h2>
+                <div class="flex flex-col md:flex-row justify-between items-center md:items-end gap-10">
+                    <p class="text-xl md:text-3xl font-light italic text-pearl/60 font-serif">"Το πρώτο βήμα είναι να ακουστείς."</p>
+                    <a href="tel:6936854668" class="hover-trigger bg-mink text-pearl px-10 py-5 rounded-none text-xs tracking-widest uppercase hover:bg-pearl hover:text-obsidian transition-all duration-300 flex items-center gap-4 group">
+                        ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ <i data-lucide="phone" class="w-4 h-4 group-hover:scale-110 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 font-sans text-xs tracking-wider uppercase text-pearl/80">
+                <div class="space-y-3">
+                    <p class="text-[9px] text-pearl/40">ΤΟΠΟΘΕΣΙΑ</p>
+                    <p class="font-medium text-pearl">Λεωφόρος Αλεξάνδρας 132<br>Γκύζη, Αττική</p>
+                </div>
+                
+                <div class="space-y-3">
+                    <p class="text-[9px] text-pearl/40">ΤΗΛΕΦΩΝΟ</p>
+                    <a href="tel:6936854668" class="hover-trigger font-medium text-pearl inline-block border-b border-pearl/30 pb-1 hover:border-pearl transition-colors">693 685 4668</a>
+                </div>
+
+                <div class="space-y-3">
+                    <p class="text-[9px] text-pearl/40">ΩΡΑΡΙΟ ΛΕΙΤΟΥΡΓΙΑΣ</p>
+                    <p class="font-medium text-pearl">ΔΕΥΤΕΡΑ - ΣΑΒΒΑΤΟ<br><span class="text-[9px] text-mink mt-1 block">ΚΑΤΟΠΙΝ ΡΑΝΤΕΒΟΥ</span></p>
+                </div>
+
+                <div class="space-y-3 border-l border-pearl/10 pl-6">
+                    <p class="text-[9px] text-mink font-bold">ΓΡΑΜΜΗ ΕΚΤΑΚΤΗΣ ΑΝΑΓΚΗΣ</p>
+                    <p class="text-[10px] lowercase text-pearl/60 leading-relaxed">
+                        Σε περίπτωση κρίσης ή σκέψεων αυτοκτονίας, καλέστε άμεσα τη γραμμή <strong class="text-pearl">1018</strong>. Δεν είστε μόνοι.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center mt-32 gap-8 border-t border-pearl/10 pt-8">
+                <div class="flex items-center gap-6">
+                    <a href="https://www.facebook.com/papasarantopoulou" target="_blank" class="hover-trigger w-10 h-10 rounded-full border border-pearl/20 flex items-center justify-center hover:bg-pearl hover:text-obsidian transition-colors"><i data-lucide="facebook" class="w-4 h-4"></i></a>
+                    <span class="w-px h-6 bg-pearl/20 mx-2"></span>
+                    <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" class="hover-trigger group flex items-center gap-3">
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-5 filter brightness-0 invert opacity-60 group-hover:opacity-100 transition-all">
+                    </a>
+                </div>
+                
+                <p class="text-[9px] text-pearl/40 uppercase tracking-[0.3em]">
+                    DESIGNED BY <a href="https://advonmedia.com" target="_blank" class="hover-trigger font-bold text-mink hover:text-pearl transition-colors">ADVON MEDIA</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="image-modal" class="fixed inset-0 z-[110] bg-obsidian/95 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-500">
+        <div class="relative w-full h-full max-w-7xl flex items-center justify-center">
+            <img id="modal-img" src="" alt="Full size view" class="max-h-[90vh] max-w-full object-contain scale-95 transition-transform duration-500 shadow-2xl">
+            <button class="hover-trigger absolute top-6 right-6 text-pearl hover:text-mink hover:scale-90 transition-all" onclick="closeModal()">
+                <i data-lucide="x" class="w-10 h-10"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Custom Cursor Logic
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        const hoverTriggers = document.querySelectorAll('.hover-trigger, a, button, .service-row, .masonry-item');
+
+        window.addEventListener('mousemove', (e) => {
+            if(cursorDot && cursorOutline) {
+                const posX = e.clientX;
+                const posY = e.clientY;
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+                cursorOutline.animate({
+                    left: `${posX}px`,
+                    top: `${posY}px`
+                }, { duration: 400, fill: "forwards", easing: "ease-out" });
+            }
+        });
+
+        hoverTriggers.forEach(trigger => {
+            trigger.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+            trigger.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+        });
+
+        // Scroll Reveal Observer
+        const reveals = document.querySelectorAll('.reveal, .reveal-right');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+        reveals.forEach(el => observer.observe(el));
+        
+        // Trigger right away for above fold content
+        setTimeout(() => {
+            document.querySelectorAll('.reveal-right').forEach(el => el.classList.add('active'));
+        }, 100);
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const line1 = document.getElementById('line1');
+        const line2 = document.getElementById('line2');
+        const mLinks = document.querySelectorAll('.mobile-link');
+        let menuOpen = false;
+
+        mobileBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if(menuOpen) {
+                mobileMenu.classList.remove('translate-y-full');
+                line1.style.transform = 'translateY(3px) rotate(45deg)';
+                line2.style.transform = 'translateY(-3px) rotate(-45deg)';
+                line2.style.width = '24px';
+                mLinks.forEach(l => {
+                    l.classList.remove('translate-y-10', 'opacity-0');
+                    l.classList.add('translate-y-0', 'opacity-100');
+                });
+            } else {
+                mobileMenu.classList.add('translate-y-full');
+                line1.style.transform = 'none';
+                line2.style.transform = 'none';
+                line2.style.width = '16px';
+                mLinks.forEach(l => {
+                    l.classList.add('translate-y-10', 'opacity-0');
+                    l.classList.remove('translate-y-0', 'opacity-100');
+                });
+            }
+        });
+        
+        mLinks.forEach(link => link.addEventListener('click', () => mobileBtn.click()));
+
+        // FAQ Accordion
+        function toggleFaq(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.icon-arrow');
+            const isOpen = content.style.maxHeight;
+
+            document.querySelectorAll('.faq-content').forEach(el => {
+                el.style.maxHeight = null;
+                el.previousElementSibling.querySelector('.icon-arrow').style.transform = 'rotate(0deg)';
+            });
+
+            if (!isOpen) {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // Image Lightbox Modal
+        function openModal(src) {
+            const modal = document.getElementById('image-modal');
+            const img = document.getElementById('modal-img');
+            img.src = src;
+            modal.style.pointerEvents = 'auto';
+            modal.classList.remove('opacity-0');
+            setTimeout(() => img.classList.remove('scale-95'), 50);
+            document.body.style.overflow = 'hidden'; // prevent background scrolling
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('image-modal');
+            const img = document.getElementById('modal-img');
+            img.classList.add('scale-95');
+            modal.classList.add('opacity-0');
+            modal.style.pointerEvents = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
