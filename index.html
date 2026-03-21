@@ -104,19 +104,27 @@ ul{list-style:none}
 .section-title .accent{color:var(--c-accent);font-style:normal}
 
 /* ABOUT */
-.about{background:var(--c-bg)}
-.about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:3.5rem;align-items:start}
-.about-image-wrap{position:relative;position:sticky;top:6rem}
-.about-image-wrap::before{content:'';position:absolute;top:-15px;left:-15px;width:100%;height:100%;border:1px solid var(--c-accent-light);z-index:0;opacity:.4}
-.about-image{position:relative;z-index:1;overflow:hidden}
-.about-image img{width:100%;height:auto;object-fit:cover;transition:transform 5s var(--ease-smooth)}
-.about-image:hover img{transform:scale(1.03)}
-.about-image-caption{position:absolute;bottom:0;left:0;right:0;padding:1.2rem 1.5rem;background:linear-gradient(to top,rgba(42,34,32,.7),transparent);z-index:2}
-.about-image-caption span{font-family:var(--font-display);font-size:.75rem;letter-spacing:.12em;color:var(--c-accent-light)}
+.about{background:var(--c-bg);overflow:hidden}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center}
+.about-image-wrap{position:relative}
+.about-image-wrap::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--c-accent-light);z-index:0;opacity:.35;transition:all .6s var(--ease-out-expo)}
+.about-image-wrap:hover::before{top:-12px;left:-12px;opacity:.6}
+.about-image-wrap::after{content:'';position:absolute;bottom:-30px;right:-30px;width:120px;height:120px;background:var(--c-accent-light);opacity:.08;border-radius:50%;z-index:0;transition:all .8s var(--ease-out-expo);animation:floatGlow 6s ease-in-out infinite}
+.about-image-wrap:hover::after{transform:scale(1.5);opacity:.12}
+.about-image{position:relative;z-index:1;overflow:hidden;box-shadow:0 25px 60px rgba(42,34,32,.12)}
+.about-image img{width:100%;height:auto;object-fit:cover;transition:transform 8s var(--ease-smooth),filter 1s var(--ease-smooth)}
+.about-image:hover img{transform:scale(1.04)}
+.about-image-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,130,110,.1) 0%,transparent 50%);z-index:1;pointer-events:none;mix-blend-mode:multiply}
+.about-image-caption{position:absolute;bottom:0;left:0;right:0;padding:1.5rem;background:linear-gradient(to top,rgba(42,34,32,.75),transparent);z-index:2}
+.about-image-caption span{font-family:var(--font-display);font-size:.7rem;letter-spacing:.15em;color:var(--c-accent-light);text-transform:uppercase}
+.about-content{display:flex;flex-direction:column;justify-content:center}
 .about-content .section-tag{margin-bottom:.8rem}
 .about-text p{font-size:.85rem;font-weight:300;line-height:1.85;color:var(--c-text-soft);margin-bottom:1.1rem}
 .about-text p:first-of-type::first-letter{font-family:var(--font-display);font-size:2.8rem;float:left;line-height:1;margin-right:.4rem;margin-top:.12rem;color:var(--c-accent);font-weight:400}
-.about-quote{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.2rem);font-weight:300;line-height:1.7;color:var(--c-text);margin:1.5rem 0;padding:1.2rem 1.5rem;border-left:2px solid var(--c-accent-light);background:var(--c-bg-alt)}
+.about-quote{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.15rem);font-weight:300;line-height:1.7;color:var(--c-text);margin:1.5rem 0 0;padding:1.2rem 1.5rem;border-left:2px solid var(--c-accent-light);background:var(--c-bg-alt);position:relative}
+.about-quote::before{content:'\201C';font-family:var(--font-display);font-size:4rem;position:absolute;top:-.3rem;left:.8rem;color:var(--c-accent-light);opacity:.3;line-height:1}
+
+@keyframes floatGlow{0%,100%{transform:scale(1);opacity:.08}50%{transform:scale(1.3);opacity:.14}}
 
 /* SERVICES */
 .services{background:var(--c-bg)}
@@ -276,7 +284,7 @@ ul{list-style:none}
   .nav-links,.nav-cta,.nav-lang{display:none}
   .nav-hamburger{display:flex}
   .about-grid{grid-template-columns:1fr;gap:2.5rem}
-  .about-image-wrap{position:static;max-width:500px;margin:0 auto}
+  .about-image-wrap{max-width:450px;margin:0 auto}
   .philosophy-grid{grid-template-columns:1fr}
   .online-grid{grid-template-columns:1fr}
   .faq-grid{grid-template-columns:1fr;gap:2rem}
@@ -422,13 +430,15 @@ ul{list-style:none}
   <div class="about-image-wrap reveal">
     <div class="about-image">
       <img src="https://github.com/agelmet/PAPASARANTOPOULOU/blob/main/ag1.jpg?raw=true" alt="Αγγελική-Ελευθερία Παπασαραντοπούλου">
+      <div class="about-image-overlay"></div>
       <div class="about-image-caption"><span data-el="gr">Αγγελική-Ελευθερία Παπασαραντοπούλου</span><span data-el="en" style="display:none">Angeliki-Eleftheria Papasarantopoulou</span></div>
     </div>
   </div>
   <div class="about-content">
     <div class="section-tag reveal" data-el="gr">Γνωρίστε την Αγγελική</div>
     <div class="section-tag reveal" data-el="en" style="display:none">Meet Angeliki</div>
-    <h2 class="section-title reveal reveal-delay-1">Αγγελική-Ελευθερία<br><span class="accent">Παπασαραντοπούλου</span></h2>
+    <h2 class="section-title reveal reveal-delay-1" data-el="gr">Αγγελική-Ελευθερία<br><span class="accent">Παπασαραντοπούλου</span></h2>
+    <h2 class="section-title reveal reveal-delay-1" data-el="en" style="display:none">Angeliki-Eleftheria<br><span class="accent">Papasarantopoulou</span></h2>
 
     <div class="about-text reveal reveal-delay-2" data-el="gr">
       <p>Ως αδειούχος Ψυχολόγος (Ε.Κ.Π.Α., HND in Counselling and Psychology), προσεγγίζω την ψυχοθεραπεία μέσα από το πρίσμα των Μεταμοντέρνων Συστημικών Προσεγγίσεων — Αφηγηματική, Διαλογική, Εστιασμένη στη Λύση. Όμως, αυτό που διαμορφώνει τον πυρήνα της δουλειάς μου στο ιδιωτικό μου γραφείο στου Γκύζη, είναι η επαφή μου με τα πιο απαιτητικά κομμάτια της ανθρώπινης εμπειρίας.</p>
@@ -672,6 +682,7 @@ ul{list-style:none}
   <div><div class="reviews-stars">★★★★★</div><div class="reviews-count">50+ <span data-el="gr">αξιολογήσεις</span><span data-el="en" style="display:none">reviews</span></div></div>
 </div>
 </div>
+<p data-el="en" style="display:none;font-size:.72rem;font-weight:300;color:var(--c-text-muted);margin-bottom:1.5rem">Reviews are displayed in their original language (Greek).</p>
 
 <div class="reviews-carousel">
 <div class="reviews-track" id="reviewsTrack">
@@ -883,7 +894,7 @@ ul{list-style:none}
   <div class="section-tag reveal" data-el="gr">Επικοινωνία</div>
   <div class="section-tag reveal" data-el="en" style="display:none">Contact</div>
   <h2 class="section-title reveal reveal-delay-1" style="color:var(--c-bg)" data-el="gr">Το πρώτο βήμα<br>είναι να <span class="accent">ακουστείς</span></h2>
-  <h2 class="section-title reveal reveal-delay-1" style="color:var(--c-bg)" data-el="en" style="display:none">The first step<br>is to be <span class="accent">heard</span></h2>
+  <h2 class="section-title reveal reveal-delay-1" data-el="en" style="display:none;color:var(--c-bg)">The first step<br>is to be <span class="accent">heard</span></h2>
   <p class="contact-quote reveal reveal-delay-2" data-el="gr">Δεν χρειάζεται να έχεις "αρκετά σοβαρό" λόγο. Αρκεί να νιώθεις πως κάτι δεν πάει καλά.</p>
   <p class="contact-quote reveal reveal-delay-2" data-el="en" style="display:none">You don't need a "serious enough" reason. It is enough to feel that something is not right.</p>
   <a href="#contact" class="contact-cta-btn reveal reveal-delay-3" data-el="gr">Κλείστε Ραντεβού <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
@@ -892,7 +903,7 @@ ul{list-style:none}
 <div class="contact-info">
   <div class="contact-item reveal">
     <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-    <div><div class="contact-item-label" data-el="gr">Διεύθυνση</div><div class="contact-item-label" data-el="en" style="display:none">Address</div><div class="contact-item-value">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αττική</div></div>
+    <div><div class="contact-item-label" data-el="gr">Διεύθυνση</div><div class="contact-item-label" data-el="en" style="display:none">Address</div><div class="contact-item-value" data-el="gr">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αττική</div><div class="contact-item-value" data-el="en" style="display:none">132 Alexandras Avenue, Gkyzi, Attica</div></div>
   </div>
   <div class="contact-item reveal reveal-delay-1">
     <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
@@ -924,7 +935,8 @@ ul{list-style:none}
 <!-- FOOTER -->
 <footer class="footer">
 <div class="footer-inner">
-<div class="footer-copy">&copy; 2026 Αγγελική-Ελευθερία Παπασαραντοπούλου</div>
+<div class="footer-copy" data-el="gr">&copy; 2026 Αγγελική-Ελευθερία Παπασαραντοπούλου</div>
+<div class="footer-copy" data-el="en" style="display:none">&copy; 2026 Angeliki-Eleftheria Papasarantopoulou</div>
 <div class="footer-credit">Designed by <a href="https://advonmedia.com" target="_blank" rel="noopener">Advon Media</a></div>
 </div>
 </footer>
@@ -966,6 +978,13 @@ document.getElementById('langBtn').textContent=currentLang==='gr'?'EN':'GR';
 const mb=document.getElementById('mobLangBtn');
 if(mb)mb.textContent=currentLang==='gr'?'EN':'GR';
 document.documentElement.lang=currentLang==='gr'?'el':'en';
+// Update review read-more buttons
+document.querySelectorAll('.review-readmore').forEach(btn=>{
+const card=btn.closest('.review-card');
+const isExpanded=card&&card.classList.contains('expanded');
+if(currentLang==='en')btn.textContent=isExpanded?'Read less':'Read more';
+else btn.textContent=isExpanded?'Λιγότερα':'Διαβάστε περισσότερα';
+});
 }
 
 // Service accordion
@@ -987,7 +1006,7 @@ function openLightbox(el){document.getElementById('lightboxImg').src=el.querySel
 function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow=''}
 
 // Review expand
-function toggleReview(e,btn){e.stopPropagation();const c=btn.closest('.review-card');c.classList.toggle('expanded');btn.textContent=c.classList.contains('expanded')?'Λιγότερα':'Διαβάστε περισσότερα'}
+function toggleReview(e,btn){e.stopPropagation();const c=btn.closest('.review-card');c.classList.toggle('expanded');const isEN=currentLang==='en';btn.textContent=c.classList.contains('expanded')?(isEN?'Read less':'Λιγότερα'):(isEN?'Read more':'Διαβάστε περισσότερα')}
 
 // Review carousel
 function scrollReviews(d){document.getElementById('reviewsTrack').scrollBy({left:d*360,behavior:'smooth'})}
