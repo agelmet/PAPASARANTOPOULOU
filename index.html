@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου | Ψυχολόγος</title>
 <meta name="description" content="Ψυχολόγος με εξειδίκευση στην Συμβουλευτική και την Ψυχοθεραπεία. Ένας ζεστός και ασφαλής χώρος, όπου μπορείς να είσαι ο εαυτός σου.">
+<!-- Minimalist Favicon: Greek letter Ψ intertwined with a thread -->
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='2'/><text x='50' y='76' font-family='serif' font-size='90' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,30 +49,35 @@ ul{list-style:none}
 .nav.scrolled{background:rgba(255,255,255,.95);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 var(--c-border)}
 
 /* Transparent Nav Styles (Default) */
-.nav-brand-name, .nav-brand-title {color: var(--c-white); transition: color 0.3s;}
+.nav-brand-name, .nav-brand-title, .nav-links a {color: var(--c-white); transition: color 0.3s;}
 .nav-hamburger span {background: var(--c-white);}
 .nav-brand{cursor:pointer;display:flex;align-items:center;gap:.8rem}
-/* Enhanced transparent logo blending */
+/* Enhanced transparent logo blending with a larger drop shadow */
 .nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s; mix-blend-mode: multiply; background: radial-gradient(circle, rgba(255,255,255,0.95) 35%, rgba(255,255,255,0.7) 65%, transparent 85%); filter: drop-shadow(0 0 15px rgba(255,255,255,1)); border-radius: 50%; padding: 2px;}
 .nav.scrolled .nav-brand-logo {background: transparent; filter: none;}
 /* Text turning black on scroll */
-.nav-brand-name{font-family:var(--font-display);font-size:1.05rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;line-height:1.2;transition:color .3s;}
-.nav-brand-title{font-family:var(--font-body);font-size:.85rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;margin-top:2px;transition:color .3s;}
+.nav-brand-name{font-family:var(--font-display);font-size:1.05rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--c-white);line-height:1.2;transition:color .3s;}
+.nav-brand-title{font-family:var(--font-body);font-size:.85rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-top:2px;transition:color .3s;}
 .nav.scrolled .nav-brand-name{color:var(--c-text);}
 .nav.scrolled .nav-brand-title{color:var(--c-text-muted);}
 
 .nav-right{display:flex;align-items:center;gap:2rem}
 .nav-links{display:flex;align-items:center;gap:2rem}
-.nav-links a{font-size:.85rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--c-text-soft);transition:color .3s;position:relative}
+.nav-links a{font-size:.65rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--c-text-soft);transition:color .3s;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--c-accent);transition:width .4s var(--ease-out-expo)}
 .nav-links a:hover{color:var(--c-text)}
 .nav-links a:hover::after{width:100%}
 
-/* Buttons permanently dark so they contrast against the background */
+/* Buttons in black state universally so they show properly against the light right-side background */
 .nav-cta{font-size:.85rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;border:1px solid var(--c-text);color:var(--c-text);transition:all .4s var(--ease-out-expo)}
 .nav-cta:hover{background:var(--c-text);color:var(--c-bg)}
 .nav-lang{font-size:.85rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .8rem;border:1px solid var(--c-border-strong);color:var(--c-text-soft);cursor:pointer;transition:all .3s;background:transparent;border-radius:2px}
 .nav-lang:hover{border-color:var(--c-accent);color:var(--c-accent)}
+
+/* Scrolled Nav Styles */
+.nav.scrolled .nav-links a {color: var(--c-text-soft);}
+.nav.scrolled .nav-links a:hover {color: var(--c-text);}
+.nav.scrolled .nav-hamburger span {background: var(--c-text);}
 
 .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001;padding:5px}
 .nav-hamburger span{width:24px;height:1px;transition:all .3s var(--ease-smooth)}
@@ -81,7 +87,7 @@ ul{list-style:none}
 .mobile-menu{position:fixed;inset:0;z-index:999;background:var(--c-bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.8rem;opacity:0;visibility:hidden;transition:all .5s var(--ease-out-expo)}
 .mobile-menu.active{opacity:1;visibility:visible}
 .mobile-menu a{font-family:var(--font-display);font-size:1.6rem;font-weight:400;letter-spacing:.06em;color:var(--c-text)}
-.mobile-menu .mob-lang{font-size:.85rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.2rem;border:1px solid var(--c-border-strong);color:var(--c-text-soft);margin-top:1rem;cursor:pointer;background:transparent}
+.mobile-menu .mob-lang{font-size:.75rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.2rem;border:1px solid var(--c-border-strong);color:var(--c-text-soft);margin-top:1rem;cursor:pointer;background:transparent}
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background-color:var(--c-bg)}
@@ -91,7 +97,7 @@ ul{list-style:none}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to left,rgba(250,248,245,1) 0%,rgba(250,248,245,0.85) 45%,rgba(250,248,245,0) 75%)}
 .hero-content{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:0 4rem;display:flex;justify-content:flex-end}
 .hero-text{max-width:700px;text-align:right}
-.hero-h1{font-family:var(--font-display);font-size:clamp(1.5rem,3.2vw,2.4rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
+.hero-h1{font-family:var(--font-display);font-size:clamp(1.3rem,3.2vw,2.2rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
 .hero-h1 span.accent{color:var(--c-accent);font-style:italic}
 .hero-sub{font-size:.95rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:2.5rem;opacity:0;animation:heroReveal 1.2s 1.6s var(--ease-out-expo) forwards}
 .hero-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:.85rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo);opacity:0;animation:heroReveal 1s 1.8s var(--ease-out-expo) forwards}
@@ -99,7 +105,7 @@ ul{list-style:none}
 .hero-btn svg{width:16px;height:16px;transition:transform .3s}
 .hero-btn:hover svg{transform:translateX(4px)}
 .hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.6rem;opacity:0;animation:heroReveal 1s 2.2s var(--ease-out-expo) forwards}
-.hero-scroll span{font-size:.85rem;letter-spacing:.25em;text-transform:uppercase;color:var(--c-text-muted)}
+.hero-scroll span{font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--c-text-muted)}
 .hero-scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--c-accent),transparent);animation:scrollPulse 2s infinite}
 @keyframes heroReveal{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
@@ -122,6 +128,7 @@ ul{list-style:none}
 /* ABOUT */
 .about{background:var(--c-bg);overflow:hidden}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:start}
+/* Image shifted further down */
 .about-image-wrap{position:relative; position:sticky; top: 10rem; margin-top: 2rem;}
 .about-image-wrap::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--c-accent-light);z-index:0;opacity:.35;transition:all .6s var(--ease-out-expo)}
 .about-image-wrap:hover::before{top:-12px;left:-12px;opacity:.6}
@@ -227,7 +234,7 @@ ul{list-style:none}
 .divider{position:relative;padding-top: 1.5rem; padding-bottom: clamp(3rem,8vw,5rem); padding-left: clamp(1.5rem,5vw,4rem); padding-right: clamp(1.5rem,5vw,4rem); overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--c-burgundy)}
 .divider-text{text-align:center;position:relative;z-index:2;max-width:700px}
 .divider-tag{font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent-light);margin-bottom:1rem}
-.divider-h{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.15rem);font-weight:300;line-height:1.7;color:var(--c-white);font-style:italic;}
+.divider-h{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-white);line-height:1.5;font-style:italic;}
 .divider-author{font-size:.85rem;font-weight:300;color:rgba(250,248,245,.6);margin-top:.8rem;letter-spacing:.1em}
 
 /* SPACE */
@@ -249,13 +256,13 @@ ul{list-style:none}
 .faq-intro p{font-size:.92rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-top:.5rem}
 .faq-item{border-bottom:1px solid var(--c-border-strong);overflow:hidden}
 .faq-q{padding:1.3rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:1.2rem}
-.faq-q h3{font-family:var(--font-display);font-size:1.1rem;font-weight:400;color:var(--c-text);transition:color .3s}
+.faq-q h3{font-family:var(--font-display);font-size:1rem;font-weight:400;color:var(--c-text);transition:color .3s}
 .faq-q:hover h3{color:var(--c-accent)}
 .faq-q-icon{width:26px;height:26px;border-radius:50%;border:1px solid var(--c-border-strong);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease-out-expo);font-size:.75rem;color:var(--c-text-soft)}
 .faq-item.active .faq-q-icon{background:var(--c-accent);border-color:var(--c-accent);color:var(--c-white);transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease-out-expo)}
 .faq-a-inner{padding:0 0 1.3rem;font-size:.92rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
-.faq-closing-quote{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.15rem);font-weight:300;line-height:1.7;color:var(--c-accent);text-align:center;margin-top:3.5rem;grid-column:1/-1;font-style:italic;}
+.faq-closing-quote{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-accent);text-align:center;margin-top:3.5rem;grid-column:1/-1;line-height:1.5;font-style:italic;}
 
 /* GLOSSARY */
 .glossary{background:var(--c-bg);border-top:1px solid var(--c-border)}
@@ -269,7 +276,7 @@ ul{list-style:none}
 .glossary-card h4{font-family:var(--font-display);font-size:1.05rem;font-weight:500;color:var(--c-accent);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
 .glossary-card h4::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--c-accent-light);flex-shrink:0;opacity:.6}
 .glossary-card p{font-size:.88rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
-.glossary-footer-quote{grid-column:1/-1;text-align:center;margin-top:3rem;font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.15rem);font-weight:300;color:var(--c-text);line-height:1.7}
+.glossary-footer-quote{grid-column:1/-1;text-align:center;margin-top:3rem;font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-text);line-height:1.5}
 .glossary-footer-quote span{display:block;font-family:var(--font-body);font-size:.85rem;color:var(--c-text-muted);margin-top:.8rem;letter-spacing:.05em}
 
 /* REVIEWS */
@@ -323,11 +330,10 @@ ul{list-style:none}
 .contact-item-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0; overflow:hidden; color:inherit; cursor:pointer; transition:all .3s var(--ease-out-expo);}
 .contact-item-icon:hover{border-color:var(--c-accent-light); background:rgba(250,248,245,.05);}
 .contact-item-icon svg{width:14px;height:14px;stroke:var(--c-accent-light);stroke-width:1.5}
-.contact-item-label{font-size:.85rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.4);margin-bottom:.25rem;display:flex;align-items:center;gap:0.5rem}
+.contact-item-label{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.4);margin-bottom:.25rem;display:flex;align-items:center;gap:0.5rem}
 .contact-item-value{font-size:.95rem;font-weight:300;color:rgba(250,248,245,.85);line-height:1.6}
 .contact-item-value a{color:rgba(250,248,245,.85);transition:color .3s}
 .contact-item-value a:hover{color:var(--c-accent-light)}
-.contact-socials{display:flex;gap:.8rem;margin-top:.8rem}
 .contact-map{margin-top:2rem;height:250px;border:1px solid rgba(250,248,245,.1);position:relative;z-index:2}
 /* Fixing map issue: Valid embed link and removing the CSS filter */
 .contact-map iframe{width:100%;height:100%;border:0;}
@@ -377,6 +383,7 @@ ul{list-style:none}
   .nav-brand-title{font-size:.85rem;letter-spacing:.12em}
   .hero{min-height:100svh; background-color: var(--c-bg); align-items:flex-end;}
   .hero-bg img{object-fit:contain; object-position:top;}
+  /* Mobile Gradient: Top-to-bottom fade to reveal text at bottom */
   .hero-bg::after{background:linear-gradient(to top, rgba(250,248,245,1) 0%, rgba(250,248,245,.95) 40%, rgba(250,248,245,0) 80%);}
   .hero-content{padding:0 1.5rem 3rem;padding-top:5rem;justify-content:flex-start;width:100%}
   .hero-text{text-align:left;max-width:100%}
@@ -392,7 +399,8 @@ ul{list-style:none}
   .about-quote{font-size:.95rem;padding:1rem 1.2rem}
   .about-text p{font-size:1rem}
   .about-text p:first-of-type::first-letter{font-size:2.4rem}
-  .cv-btn{font-size:1rem;}
+  .cv-page h2{margin-bottom:1.5rem;}
+  .cv-content h4{font-size: .9rem;}
   .roadmap-step{grid-template-columns:auto 1fr;gap:1.5rem}
   .roadmap-step:nth-child(odd) .roadmap-step-content{text-align:left}
   .roadmap-step:nth-child(odd) .roadmap-step-empty,.roadmap-step:nth-child(even) .roadmap-step-empty{display:none}
@@ -414,7 +422,7 @@ ul{list-style:none}
   .review-card{min-width:280px;max-width:310px;padding:1.5rem}
   .reviews-score{font-size:2.2rem}
   .contact-quote{font-size:1.05rem}
-  .faq-q h3{font-size:1.1rem}
+  .faq-q h3{font-size:.92rem}
   .faq-closing-quote{font-size:1.1rem;}
   .marquee-item{font-size:.9rem;padding:0 1.2rem}
   .glossary-grid{grid-template-columns:1fr}
@@ -433,6 +441,8 @@ ul{list-style:none}
 <div class="loader-inner">
 <div class="loader-name" data-el="gr">Αγγελική<span class="straight-dash">-</span>Ελευθερία Ι. Παπασαραντοπούλου</div>
 <div class="loader-name" data-el="en" style="display:none">Angeliki<span class="straight-dash">-</span>Eleftheria I. Papasarantopoulou</div>
+<div class="loader-title" data-el="gr">Ψυχολόγος</div>
+<div class="loader-title" data-el="en" style="display:none">Psychologist</div>
 <div class="loader-line"></div>
 </div>
 </div>
@@ -450,6 +460,7 @@ ul{list-style:none}
 <div class="nav-right">
   <div class="nav-links">
     <a href="#about" data-el="gr">Προφίλ</a><a href="#about" data-el="en" style="display:none">About</a>
+    <a href="#cv" data-el="gr">Βιογραφικό</a><a href="#cv" data-el="en" style="display:none">Resume</a>
     <a href="#services" data-el="gr">Υπηρεσίες</a><a href="#services" data-el="en" style="display:none">Services</a>
     <a href="#space" data-el="gr">Χώρος</a><a href="#space" data-el="en" style="display:none">Space</a>
     <a href="#faq" data-el="gr">Ερωτήσεις</a><a href="#faq" data-el="en" style="display:none">FAQ</a>
@@ -480,7 +491,9 @@ ul{list-style:none}
 <img src="https://github.com/agelmet/PAPASARANTOPOULOU/blob/main/ag2.jpg?raw=true" alt="Χώρος γραφείου" loading="eager">
 </div>
 <div class="hero-content">
-<div class="hero-text" style="max-width: 700px;">
+<div class="hero-text">
+  <div class="hero-tag" data-el="gr">Ψυχολόγος</div>
+  <div class="hero-tag" data-el="en" style="display:none">Psychologist</div>
   
   <h1 class="hero-h1" data-el="gr">Ό,τι κι αν αντιμετωπίζεις, δεν σε καθορίζει.<br><span class="accent">Μαζί, μπορούμε να το δούμε από&nbsp;μια&nbsp;άλλη&nbsp;οπτική.</span></h1>
   <h1 class="hero-h1" data-el="en" style="display:none">Whatever you're facing, it doesn't define you.<br><span class="accent">Together, we can look at it from a different perspective.</span></h1>
@@ -562,6 +575,7 @@ ul{list-style:none}
 </div>
 </section>
 
+<!-- CV SECTION -->
 <section class="section cv-page" id="cv">
 <div class="section-inner">
   <div class="section-tag reveal" data-el="gr">Εκπαίδευση & Εμπειρία</div>
@@ -635,6 +649,7 @@ ul{list-style:none}
 </div>
 </section>
 
+<!-- SERVICES -->
 <section class="section services" id="services">
 <div class="section-inner">
 <div class="section-tag reveal" data-el="gr">Πώς Μπορούμε να Δουλέψουμε Μαζί</div>
@@ -704,6 +719,7 @@ ul{list-style:none}
 </div>
 </section>
 
+<!-- PHILOSOPHY -->
 <section class="section philosophy" id="philosophy">
 <div class="section-inner">
 <h2 class="section-title reveal reveal-delay-1" data-el="gr">Η Προσέγγισή μου<br>στην <span class="accent">θεραπεία</span></h2>
@@ -742,6 +758,7 @@ ul{list-style:none}
 </div>
 </section>
 
+<!-- ROADMAP -->
 <section class="section roadmap">
 <div class="section-inner">
 
@@ -766,6 +783,7 @@ ul{list-style:none}
   <div class="roadmap-step-empty"></div>
 </div>
 
+<!-- Trail 1→2 -->
 <div class="roadmap-trail roadmap-trail-1 reveal">
   <svg viewBox="0 0 800 80" preserveAspectRatio="none">
     <path class="roadmap-trail-path" d="M400,0 C420,40 600,40 700,40 C750,40 780,50 780,60" />
@@ -789,6 +807,7 @@ ul{list-style:none}
   </div>
 </div>
 
+<!-- Trail 2→3 -->
 <div class="roadmap-trail roadmap-trail-2 reveal">
   <svg viewBox="0 0 800 80" preserveAspectRatio="none">
     <path class="roadmap-trail-path" d="M400,0 C380,40 200,40 100,40 C50,40 20,50 20,60" />
@@ -816,6 +835,7 @@ ul{list-style:none}
 </div>
 </section>
 
+<!-- ONLINE -->
 <section class="section online">
 <div class="section-inner">
 <div class="online-grid">
@@ -840,6 +860,7 @@ ul{list-style:none}
 </div>
 </section>
 
+<!-- DIVIDER -->
 <div class="divider">
 <div class="divider-text">
 <div class="divider-tag" data-el="gr">Ανακάλυψη</div>
@@ -850,6 +871,7 @@ ul{list-style:none}
 </div>
 </div>
 
+<!-- SPACE -->
 <section class="section space" id="space">
 <div class="section-inner">
 <div class="section-tag reveal" data-el="gr">Ο Χώρος</div>
@@ -867,11 +889,13 @@ ul{list-style:none}
 </div>
 </section>
 
+<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
 <div class="lightbox-close">✕</div>
 <img id="lightboxImg" src="" alt="">
 </div>
 
+<!-- FAQ -->
 <section class="section faq" id="faq">
 <div class="section-inner">
 <div class="faq-grid">
@@ -981,6 +1005,7 @@ ul{list-style:none}
 </div>
 </section>
 
+<!-- GLOSSARY -->
 <section class="section glossary">
 <div class="section-inner">
 <div class="glossary-intro">
@@ -1042,6 +1067,7 @@ ul{list-style:none}
 </div>
 </section>
 
+<!-- REVIEWS -->
 <section class="section reviews" id="reviews">
 <div class="section-inner">
 <div class="reviews-header">
@@ -1057,6 +1083,8 @@ ul{list-style:none}
 
 <div class="reviews-carousel">
 <div class="reviews-track" id="reviewsTrack">
+
+<!-- Alternating: Doctoranytime, Google, Doctoranytime, Google... -->
 
 <div class="review-card">
 <div class="review-source"><img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime"></div>
@@ -1098,27 +1126,29 @@ ul{list-style:none}
 <button onclick="scrollReviews(1)" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
 </div>
 
+<!-- Updated Review Buttons -->
 <div class="reviews-actions" style="display:flex; justify-content:center; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;">
    <a href="https://www.google.com/search?client=safari&hs=VnKV&sa=X&sca_esv=cb596a67502e2f5f&rls=en&sxsrf=ANbL-n56UEsNJtvPHG8sg57is0cymoKp6w:1780378826370&q=Αγγελική-Ελευθερία+Ι.+Παπασαραντοπούλου+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNLcwszQ3MjU0MzA1MjEztDA3NdzAyPiKMejcxHObgXDrud3ndp7bdW6d7rmpQObW863ndgDJxnPrz21UODdTT-HcgnMbzzcAcTMQN57beG7v-ZZz-4Ei-8_3AjXsP9-qEJRalplaXryIlQaGAgDyUnp4xQAAAA&rldimm=17869725160524618751&tbm=lcl&hl=en-GR&ved=2ahUKEwjJtYv86-eUAxV_RPEDHTl2F0UQ9fQKegQIShAG&biw=1728&bih=994&dpr=2#lkt=LocalPoiReviews" target="_blank" rel="noopener" class="review-btn" data-el="gr">
       <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-      ΟΛΕΣ ΤΙΣ ΑΞΙΟΛΟΓΗΣΕΙΣ ΣΤΟ GOOGLE
+      ΑΞΙΟΛΟΓΗΣΕΙΣ GOOGLE
    </a>
    <a href="https://www.google.com/search?client=safari&hs=VnKV&sa=X&sca_esv=cb596a67502e2f5f&rls=en&sxsrf=ANbL-n56UEsNJtvPHG8sg57is0cymoKp6w:1780378826370&q=Αγγελική-Ελευθερία+Ι.+Παπασαραντοπούλου+Reviews&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNLcwszQ3MjU0MzA1MjEztDA3NdzAyPiKMejcxHObgXDrud3ndp7bdW6d7rmpQObW863ndgDJxnPrz21UODdTT-HcgnMbzzcAcTMQN57beG7v-ZZz-4Ei-8_3AjXsP9-qEJRalplaXryIlQaGAgDyUnp4xQAAAA&rldimm=17869725160524618751&tbm=lcl&hl=en-GR&ved=2ahUKEwjJtYv86-eUAxV_RPEDHTl2F0UQ9fQKegQIShAG&biw=1728&bih=994&dpr=2#lkt=LocalPoiReviews" target="_blank" rel="noopener" class="review-btn" data-el="en" style="display:none">
       <svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-      ALL GOOGLE REVIEWS
+      GOOGLE REVIEWS
    </a>
    
    <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou#review-section" target="_blank" rel="noopener" class="review-btn" data-el="gr">
-      <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" style="width:18px;height:18px;border-radius:0;"> ΟΛΕΣ ΤΙΣ ΑΞΙΟΛΟΓΗΣΕΙΣ ΣΤΟ DOCTORANYTIME
+      <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" style="width:18px;height:18px;border-radius:0;"> ΑΞΙΟΛΟΓΗΣΕΙΣ DOCTORANYTIME
    </a>
    <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou#review-section" target="_blank" rel="noopener" class="review-btn" data-el="en" style="display:none">
-      <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" style="width:18px;height:18px;border-radius:0;"> ALL DOCTORANYTIME REVIEWS
+      <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" style="width:18px;height:18px;border-radius:0;"> DOCTORANYTIME REVIEWS
    </a>
 </div>
 
 </div>
 </section>
 
+<!-- CONTACT -->
 <section class="section contact" id="contact">
 <div class="section-inner">
 <div class="contact-grid">
@@ -1130,6 +1160,7 @@ ul{list-style:none}
   <p class="contact-quote reveal reveal-delay-2" data-el="gr">Δεν χρειάζεται να έχεις έναν συγκεκριμένο λόγο για να ξεκινήσεις. Αρκεί να νιώθεις πως κάτι σε απασχολεί.</p>
   <p class="contact-quote reveal reveal-delay-2" data-el="en" style="display:none">You don't need a specific reason to start. It is enough to feel that something is troubling you.</p>
   
+  <!-- Updated CTA Button -->
   <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" class="contact-cta-btn reveal reveal-delay-3" data-el="gr">Κλείσε Ραντεβού <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
   <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" class="contact-cta-btn reveal reveal-delay-3" data-el="en" style="display:none">Book Appointment <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
 </div>
@@ -1158,15 +1189,16 @@ ul{list-style:none}
     </div>
   </div>
   <div class="contact-item reveal reveal-delay-3">
-    <a href="https://maps.google.com/maps?q=Λεωφόρος+Αλεξάνδρας+132,+Γκύζη,+Αθήνα&t=&z=15&ie=UTF8&iwloc=&output=embed" target="_blank" rel="noopener" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
+    <a href="https://www.google.com/maps/place/Leof.+Alexandras+132,+Athina+114+71,+Greece/" target="_blank" rel="noopener" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
     <div>
       <div class="contact-item-label" data-el="gr">Διεύθυνση</div>
       <div class="contact-item-label" data-el="en" style="display:none">Address</div>
-      <div class="contact-item-value" data-el="gr"><a href="https://maps.google.com/maps?q=Λεωφόρος+Αλεξάνδρας+132,+Γκύζη,+Αθήνα&t=&z=15&ie=UTF8&iwloc=&output=embed" target="_blank" rel="noopener">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αττική</a></div>
-      <div class="contact-item-value" data-el="en" style="display:none"><a href="https://maps.google.com/maps?q=Λεωφόρος+Αλεξάνδρας+132,+Γκύζη,+Αθήνα&t=&z=15&ie=UTF8&iwloc=&output=embed" target="_blank" rel="noopener">132 Alexandras Avenue, Gkyzi, Attica</a></div>
+      <div class="contact-item-value" data-el="gr"><a href="https://www.google.com/maps/place/Leof.+Alexandras+132,+Athina+114+71,+Greece/" target="_blank" rel="noopener">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αθήνα</a></div>
+      <div class="contact-item-value" data-el="en" style="display:none"><a href="https://www.google.com/maps/place/Leof.+Alexandras+132,+Athina+114+71,+Greece/" target="_blank" rel="noopener">132 Alexandras Avenue, Gkyzi, Athens</a></div>
     </div>
   </div>
   
+  <!-- Grouped Socials using contact-item format -->
   <div class="contact-item reveal reveal-delay-4" style="margin-top:0.5rem">
     <a href="https://www.facebook.com/papasarantopoulou" target="_blank" rel="noopener" class="contact-item-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
@@ -1179,7 +1211,7 @@ ul{list-style:none}
   
   <div class="contact-item reveal reveal-delay-4">
     <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" class="contact-item-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><text x="12" y="16" text-anchor="middle" font-size="12" font-family="serif" font-weight="700" stroke="none" fill="currentColor">d</text></svg>
+      <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="Doctoranytime" style="width:18px;height:18px;object-fit:contain;">
     </a>
     <div>
       <div class="contact-item-label">Doctoranytime</div>
@@ -1188,17 +1220,20 @@ ul{list-style:none}
   </div>
 </div>
 </div>
+<!-- Updated Map Link to exact coordinates wrapper -->
 <div class="contact-map reveal reveal-delay-4">
-  <iframe src="https://maps.google.com/maps?q=Λεωφόρος+Αλεξάνδρας+132,+Γκύζη,+Αθήνα&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.426296331902!2d23.74381881533034!3d37.99042977972054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a2b7c4a1b8d5%3A0x8e8a0058f8b1c4c8!2zTGVvZi4gQWxleGFuZHJhcyAxMzIsIEEuIFN0ZXBhbiAxMTQgNzEsIEdyZWVjZQ!5e0!3m2!1sen!2sus!4v1628172827182!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </section>
 
+<!-- EMERGENCY -->
 <div class="emergency">
 <p data-el="gr">Αν αισθάνεσαι ότι εσύ ή κάποιος κοντινός σου άνθρωπος βρίσκεται σε άμεση ψυχική κρίση, υπάρχει βοήθεια: <a href="tel:1018">Γραμμή Παρέμβασης για την Αυτοκτονία 1018</a>, όλο το 24ωρο.</p>
 <p data-el="en" style="display:none">If you feel that you or someone close to you is in an immediate mental health crisis, help is available: <a href="tel:1018">Suicide Intervention Line 1018</a>, 24 hours a day.</p>
 </div>
 
+<!-- FOOTER -->
 <footer class="footer">
 <div class="footer-inner">
 <div class="footer-copy" data-el="gr">© 2026 Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου</div>
@@ -1232,26 +1267,20 @@ document.getElementById('mobileMenu').classList.remove('active');
 document.body.style.overflow='';
 }
 
-// Language toggle
+// Language toggle (Bilingual function restored)
 let currentLang='gr';
 function toggleLang(){
 currentLang=currentLang==='gr'?'en':'gr';
 const showLang=currentLang;
 const hideLang=currentLang==='gr'?'en':'gr';
-
-// Toggle standard elements
 document.querySelectorAll('[data-el="'+showLang+'"]').forEach(el=>el.style.display='');
 document.querySelectorAll('[data-el="'+hideLang+'"]').forEach(el=>el.style.display='none');
-
-// Update Buttons text
 document.getElementById('langBtn').textContent=currentLang==='gr'?'EN':'GR';
 const mb=document.getElementById('mobLangBtn');
 if(mb)mb.textContent=currentLang==='gr'?'EN':'GR';
-
-// Update Document Lang tag
 document.documentElement.lang=currentLang==='gr'?'el':'en';
 
-// Update review read-more buttons
+// Update review read-more buttons based on expanded state and language
 document.querySelectorAll('.review-readmore').forEach(btn=>{
 const card=btn.closest('.review-card');
 const isExpanded=card&&card.classList.contains('expanded');
