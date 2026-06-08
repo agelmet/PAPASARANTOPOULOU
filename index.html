@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου | Ψυχολόγος</title>
 <meta name="description" content="Ψυχολόγος με εξειδίκευση στην Συμβουλευτική και την Ψυχοθεραπεία. Ένας ζεστός και ασφαλής χώρος, όπου μπορείς να είσαι ο εαυτός σου.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='15 15 70 70'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='4'/><text x='50' y='76' font-family='serif' font-size='95' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M5,50 Q30,20 50,60 T95,40' fill='none' stroke='%234A0404' stroke-width='4'/><text x='50' y='82' font-family='serif' font-size='105' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -54,7 +54,7 @@ ul{list-style:none}
 /* Enhanced transparent logo blending with a larger drop shadow */
 .nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s; mix-blend-mode: multiply; background: radial-gradient(circle, rgba(255,255,255,0.95) 35%, rgba(255,255,255,0.7) 65%, transparent 85%); filter: drop-shadow(0 0 15px rgba(255,255,255,1)); border-radius: 50%; padding: 2px;}
 .nav.scrolled .nav-brand-logo {background: transparent; filter: none;}
-/* Text turning black on scroll - using the original smaller sizes */
+/* Text turning black on scroll */
 .nav-brand-name{font-family:var(--font-display);font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--c-white);line-height:1.2;transition:color .3s;}
 .nav-brand-title{font-family:var(--font-body);font-size:.55rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-top:2px;transition:color .3s;}
 .nav.scrolled .nav-brand-name{color:var(--c-text);}
@@ -147,7 +147,7 @@ ul{list-style:none}
 .about-quote{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.15rem);font-weight:300;line-height:1.7;color:var(--c-text);margin:1.5rem 0 0;padding:1.2rem 1.5rem;border-left:2px solid var(--c-accent-light);background:var(--c-bg-alt);position:relative}
 .about-quote::before{content:'\201C';font-family:var(--font-display);font-size:4rem;position:absolute;top:-.3rem;left:.8rem;color:var(--c-accent-light);opacity:.3;line-height:1}
 
-/* CV SECTION (NEW FULL PAGE SECTION) */
+/* CV SECTION */
 .cv-page{background:var(--c-bg-alt); padding-top:4rem; padding-bottom:4rem;}
 .cv-page h2{margin-bottom: 2.5rem;}
 .cv-content h4{font-size:1rem;font-weight:500;color:var(--c-text);margin:2rem 0 1rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--c-border);padding-bottom:.5rem;}
@@ -215,7 +215,8 @@ ul{list-style:none}
 .phil-card p{font-size:1rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
-.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center center / contain no-repeat var(--c-burgundy); color:var(--c-bg);position:relative;overflow:hidden; padding-top: clamp(4.5rem, 12vw, 8rem); padding-bottom: 2rem; padding-left: clamp(1.2rem, 5vw, 4rem); padding-right: clamp(1.2rem, 5vw, 4rem);}
+/* Updated to contain to avoid cropping issues */
+.online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center right / contain no-repeat var(--c-burgundy); color:var(--c-bg);position:relative;overflow:hidden; padding-top: clamp(4.5rem, 12vw, 8rem); padding-bottom: 2rem; padding-left: clamp(1.2rem, 5vw, 4rem); padding-right: clamp(1.2rem, 5vw, 4rem);}
 .online::before{content:'';position:absolute;top:-40%;right:-10%;width:500px;height:500px;opacity:.08;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,50 Q25,40 40,50 T70,50 T100,50" stroke="%23D9A999" fill="none" stroke-width="0.5"/><text x="90" y="45" font-family="serif" font-size="20" fill="%23D9A999">Ψ</text><path d="M90,45 Q85,60 70,65 T40,60 T10,55" stroke="%23D9A999" fill="none" stroke-width="0.5"/><path d="M10,55 Q12,50 15,55 Q18,60 15,65 T10,65 Z" stroke="%23D9A999" fill="%23D9A999"/></svg>');background-size:contain;background-position:center;background-repeat:no-repeat}
 .online-grid{display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:2}
 .online-tag{color:var(--c-accent-light)}
@@ -228,11 +229,12 @@ ul{list-style:none}
 .online-feature svg{width:18px;height:18px;stroke:var(--c-accent-light);flex-shrink:0}
 
 /* DIVIDER */
+/* Adjusted top padding to reduce the gap */
 .divider{position:relative;padding-top: 1.5rem; padding-bottom: clamp(3rem,8vw,5rem); padding-left: clamp(1.5rem,5vw,4rem); padding-right: clamp(1.5rem,5vw,4rem); overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--c-burgundy)}
 .divider-text{text-align:center;position:relative;z-index:2;max-width:700px}
 .divider-tag{font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent-light);margin-bottom:1rem}
 .divider-h{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-white);line-height:1.5;font-style:italic;}
-.divider-author{font-size:.7rem;font-weight:300;color:rgba(250,248,245,.6);margin-top:.8rem;letter-spacing:.1em}
+.divider-author{font-size:.85rem;font-weight:300;color:rgba(250,248,245,.6);margin-top:.8rem;letter-spacing:.1em}
 
 /* SPACE */
 .space{background:var(--c-bg)}
@@ -253,8 +255,8 @@ ul{list-style:none}
 .faq-intro p{font-size:.92rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-top:.5rem}
 .faq-item{border-bottom:1px solid var(--c-border-strong);overflow:hidden}
 .faq-q{padding:1.3rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:1.2rem}
-/* FAQ Question Typographic Upgrade */
-.faq-q h3{font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--c-text);transition:color .3s;letter-spacing:.02em;}
+/* Enhanced Font Size and Weight for FAQ Questions */
+.faq-q h3{font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--c-text);transition:color .3s}
 .faq-q:hover h3{color:var(--c-accent)}
 .faq-q-icon{width:26px;height:26px;border-radius:50%;border:1px solid var(--c-border-strong);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease-out-expo);font-size:.75rem;color:var(--c-text-soft)}
 .faq-item.active .faq-q-icon{background:var(--c-accent);border-color:var(--c-accent);color:var(--c-white);transform:rotate(45deg)}
@@ -275,8 +277,8 @@ ul{list-style:none}
 .glossary-card h4::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--c-accent-light);flex-shrink:0;opacity:.6}
 .glossary-card p{font-size:.88rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 .glossary-footer-quote{grid-column:1/-1;text-align:center;margin-top:3rem;font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-text);line-height:1.5}
-/* Quote Attribution Typographic Upgrade */
-.glossary-footer-quote span{display:block;font-family:var(--font-body);font-size:.85rem;color:var(--c-text-muted);margin-top:1rem;letter-spacing:.05em}
+/* Quote Attribution Font Size Increased */
+.glossary-footer-quote span{display:block;font-family:var(--font-body);font-size:.85rem;color:var(--c-text-muted);margin-top:.8rem;letter-spacing:.05em; font-weight: 400;}
 
 /* REVIEWS */
 .reviews{background:var(--c-bg-alt);overflow:hidden}
@@ -311,9 +313,7 @@ ul{list-style:none}
 .review-btn{font-size:.85rem; padding:.8rem 1.5rem; border:1px solid var(--c-accent); color:var(--c-accent); border-radius:4px; display:inline-flex; align-items:center; gap:.5rem; text-transform:uppercase; letter-spacing:0.1em; transition:all 0.3s;}
 .review-btn:hover{background:var(--c-accent); color:var(--c-white);}
 .review-btn svg{width:20px; height:20px; fill:currentColor;}
-/* Custom Doctoranytime button icon fix to inherit colors properly */
-.review-btn .doc-icon{width:24px; height:24px; border-radius:50%; border: 1.5px solid currentColor; display: flex; align-items: center; justify-content: center;}
-.review-btn .doc-icon svg{width: 14px; height: 14px; fill: currentColor;}
+.review-btn img{width:28px; height:28px; border-radius:50%; object-fit:contain; background:#fff; padding:2px;}
 
 /* CONTACT */
 .contact{background:var(--c-burgundy);color:var(--c-bg);position:relative;overflow:hidden}
@@ -327,7 +327,6 @@ ul{list-style:none}
 .contact-cta-btn svg{width:15px;height:15px}
 .contact-info{display:flex;flex-direction:column;gap:1.8rem}
 .contact-item{display:flex;gap:1.2rem;align-items:center}
-/* Make icons clickable by keeping them structurally sound and responsive on hover */
 .contact-item-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0; overflow:hidden; color:inherit; cursor:pointer; transition:all .3s var(--ease-out-expo);}
 .contact-item-icon:hover{border-color:var(--c-accent-light); background:rgba(250,248,245,.05);}
 .contact-item-icon svg{width:14px;height:14px;stroke:var(--c-accent-light);stroke-width:1.5}
@@ -379,25 +378,28 @@ ul{list-style:none}
 @media(max-width:768px){
   .nav{padding:1rem 1.2rem;padding-top:env(safe-area-inset-top,.6rem)}
   .nav-brand-logo{width:60px;height:60px}
-  .nav-brand-name{font-size:.8rem;letter-spacing:.05em}
-  .nav-brand-title{font-size:.85rem;letter-spacing:.12em}
+  .nav-brand-name{font-size:.7rem;letter-spacing:.05em}
+  .nav-brand-title{font-size:.45rem;letter-spacing:.12em}
   .hero{min-height:100svh; background-color: var(--c-bg); align-items:flex-end;}
   .hero-bg img{object-fit:contain; object-position:top;}
+  /* Mobile Gradient: Top-to-bottom fade to reveal text at bottom */
   .hero-bg::after{background:linear-gradient(to top, rgba(250,248,245,1) 0%, rgba(250,248,245,.95) 40%, rgba(250,248,245,0) 80%);}
   .hero-content{padding:0 1.5rem 3rem;padding-top:5rem;justify-content:flex-start;width:100%}
   .hero-text{text-align:left;max-width:100%}
+  .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:.55rem;letter-spacing:.25em}
+  /* Forced mobile hero text to be upright/normal */
   .hero-h1{font-size:clamp(1.4rem,4vw,1.8rem);line-height:1.3;margin-bottom:1.2rem;font-style:normal !important;}
   .hero-h1 span.accent{font-style:normal !important;}
-  .hero-sub{font-size:1.1rem;line-height:1.7;margin-bottom:2rem}
-  .hero-btn{font-size:1rem;padding:.8rem 1.6rem;width:100%;justify-content:center}
+  .hero-sub{font-size:.78rem;line-height:1.7;margin-bottom:2rem}
+  .hero-btn{font-size:.58rem;padding:.8rem 1.6rem;width:100%;justify-content:center}
   .hero-scroll{bottom:1.2rem}
   .section{padding:clamp(2.5rem,8vw,4rem) 1.2rem}
   .section-title{font-size:clamp(1.3rem,5vw,2.0rem);line-height:1.25}
-  .about-quote{font-size:1.05rem;padding:1rem 1.2rem}
-  .about-text p{font-size:1rem}
+  .about-quote{font-size:.95rem;padding:1rem 1.2rem}
+  .about-text p{font-size:.85rem}
   .about-text p:first-of-type::first-letter{font-size:2.4rem}
   .cv-page h2{margin-bottom:1.5rem;}
-  .cv-content h4{font-size: 1rem;}
+  .cv-content h4{font-size: .9rem;}
   .roadmap-step{grid-template-columns:auto 1fr;gap:1.5rem}
   .roadmap-step:nth-child(odd) .roadmap-step-content{text-align:left}
   .roadmap-step:nth-child(odd) .roadmap-step-empty,.roadmap-step:nth-child(even) .roadmap-step-empty{display:none}
@@ -413,22 +415,25 @@ ul{list-style:none}
   .service-item{gap:1rem;padding:1.5rem 0}
   .service-num{font-size:1.3rem;min-width:30px}
   .service-info h3{font-size:1rem}
-  .online{background-size: 80% auto;} 
+  .online{background-size: contain;} /* Ensure image scales properly on mobile */
   .divider-h{font-size:clamp(1.1rem,3.5vw,1.5rem);line-height:1.5}
   .space-gallery{grid-template-columns:1fr 1fr;gap:.6rem}
+  /* Exact size for perfectly contained 1 by 1 view on mobile without cropping */
   .review-card{min-width:100%;max-width:100%;padding:1.5rem;flex: 0 0 100%;}
   .reviews-score{font-size:2.2rem}
   .contact-quote{font-size:1.05rem}
-  .faq-q h3{font-size:1.15rem;font-weight:600;}
+  /* Bolder, slightly larger FAQ questions on mobile */
+  .faq-q h3{font-size:1.05rem; font-weight:600;}
   .faq-closing-quote{font-size:1.1rem;}
-  .glossary-footer-quote span{font-size:.95rem;}
+  /* Custom Quote Attribution Size on mobile */
+  .glossary-footer-quote span{font-size:.9rem;}
   .marquee-item{font-size:.7rem;padding:0 1.2rem}
   .glossary-grid{grid-template-columns:1fr}
 }
 
 @media(max-width:480px){
   .space-gallery{grid-template-columns:1fr}
-  .review-card{min-width:100%;flex: 0 0 100%;}
+  .review-card{min-width:260px}
   .philosophy-grid{gap:1rem}
 }
 </style>
@@ -439,8 +444,6 @@ ul{list-style:none}
 <div class="loader-inner">
 <div class="loader-name" data-el="gr">Αγγελική<span class="straight-dash">-</span>Ελευθερία Ι. Παπασαραντοπούλου</div>
 <div class="loader-name" data-el="en" style="display:none">Angeliki<span class="straight-dash">-</span>Eleftheria I. Papasarantopoulou</div>
-<div class="loader-title" data-el="gr">Ψυχολόγος</div>
-<div class="loader-title" data-el="en" style="display:none">Psychologist</div>
 <div class="loader-line"></div>
 </div>
 </div>
@@ -1235,6 +1238,14 @@ ul{list-style:none}
 <div class="review-card">
 <div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
 <div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Εξαιρετική επαγγελματίας! Πλήρως καταρτισμένη, χαμογελαστή και ευγενέστατη! Τη συστήνω ανεπιφύλακτα!</div>
+<div class="review-text" data-el="en" style="display:none">Excellent professional! Fully qualified, smiling, and extremely polite! I highly recommend her!</div>
+<div class="review-meta"><span data-el="gr">Eleanna Spyropoulou</span><span data-el="en" style="display:none">Eleanna Spyropoulou</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
 <div class="review-text" data-el="gr">Καταπληκτική!! Άρτια κατηρτισμένη στο αντικείμενο της με συνεχή εξέλιξη στις γνώσεις της!! Φαίνεται ότι αγαπάει αυτό που κάνει!! Απο τις πρώτες συνεδρίες αισθάνεται κανείς άνεση μαζί της!! Με έχει βοηθήσει αφάνταστα σε όλους τους τομείς της ζωής μου!! Όποτε της μιλάω νιώθω ότι μιλαω στο φύλακα άγγελό μου!! 5 αστέρια σίγουρα και λίγα είναι!</div>
 <div class="review-text" data-el="en" style="display:none">Amazing!! Perfectly trained in her field with continuous development in her knowledge!! It shows that she loves what she does!! From the very first sessions, one feels comfortable with her!! She has helped me incredibly in all areas of my life!! Whenever I talk to her, I feel like I'm talking to my guardian angel!! 5 stars for sure, and even that is an understatement!</div>
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
@@ -1328,12 +1339,12 @@ ul{list-style:none}
     </div>
   </div>
   <div class="contact-item reveal reveal-delay-3">
-    <a href="https://maps.app.goo.gl/9z3UqVXXk2MndgDFA" target="_blank" rel="noopener" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
+    <a href="https://maps.app.goo.gl/dYxM1Ea4Y97R2nC36" target="_blank" rel="noopener" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
     <div>
       <div class="contact-item-label" data-el="gr">Διεύθυνση</div>
       <div class="contact-item-label" data-el="en" style="display:none">Address</div>
-      <div class="contact-item-value" data-el="gr"><a href="https://maps.app.goo.gl/9z3UqVXXk2MndgDFA" target="_blank" rel="noopener">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αθήνα</a></div>
-      <div class="contact-item-value" data-el="en" style="display:none"><a href="https://maps.app.goo.gl/9z3UqVXXk2MndgDFA" target="_blank" rel="noopener">132 Alexandras Avenue, Gkyzi, Athens</a></div>
+      <div class="contact-item-value" data-el="gr"><a href="https://maps.app.goo.gl/dYxM1Ea4Y97R2nC36" target="_blank" rel="noopener">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αθήνα</a></div>
+      <div class="contact-item-value" data-el="en" style="display:none"><a href="https://maps.app.goo.gl/dYxM1Ea4Y97R2nC36" target="_blank" rel="noopener">132 Alexandras Avenue, Gkyzi, Athens</a></div>
     </div>
   </div>
   
@@ -1359,7 +1370,7 @@ ul{list-style:none}
 </div>
 </div>
 <div class="contact-map reveal reveal-delay-4">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.577699709796!2d23.751633515320577!3d37.98708307972147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd511c4c1a5b%3A0xc07a82dcbc150a04!2sLeof.%20Alexandras%20132%2C%20Athina%20114%2071%2C%20Greece!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3144.6067759844415!2d23.7495046!3d37.9904207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a2b535d452fb%3A0xc3311dbbf3f5c7fa!2zTGVvZi4gQWxleGFuZHJhcyAxMzIsIEF0aGluYSAxMTQgNzE!5e0!3m2!1sen!2sgr!4v1714574921609!5m2!1sen!2sgr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </section>
