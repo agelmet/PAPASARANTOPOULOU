@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου | Ψυχολόγος</title>
 <meta name="description" content="Ψυχολόγος με εξειδίκευση στην Συμβουλευτική και την Ψυχοθεραπεία. Ένας ζεστός και ασφαλής χώρος, όπου μπορείς να είσαι ο εαυτός σου.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M5,50 Q30,20 50,60 T95,40' fill='none' stroke='%234A0404' stroke-width='4'/><text x='50' y='82' font-family='serif' font-size='105' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='4'/><text x='50' y='76' font-family='serif' font-size='95' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -54,7 +54,7 @@ ul{list-style:none}
 /* Enhanced transparent logo blending with a larger drop shadow */
 .nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s; mix-blend-mode: multiply; background: radial-gradient(circle, rgba(255,255,255,0.95) 35%, rgba(255,255,255,0.7) 65%, transparent 85%); filter: drop-shadow(0 0 15px rgba(255,255,255,1)); border-radius: 50%; padding: 2px;}
 .nav.scrolled .nav-brand-logo {background: transparent; filter: none;}
-/* Text turning black on scroll */
+/* Text turning black on scroll - using the original smaller sizes */
 .nav-brand-name{font-family:var(--font-display);font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--c-white);line-height:1.2;transition:color .3s;}
 .nav-brand-title{font-family:var(--font-body);font-size:.55rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-top:2px;transition:color .3s;}
 .nav.scrolled .nav-brand-name{color:var(--c-text);}
@@ -147,7 +147,7 @@ ul{list-style:none}
 .about-quote{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.15rem);font-weight:300;line-height:1.7;color:var(--c-text);margin:1.5rem 0 0;padding:1.2rem 1.5rem;border-left:2px solid var(--c-accent-light);background:var(--c-bg-alt);position:relative}
 .about-quote::before{content:'\201C';font-family:var(--font-display);font-size:4rem;position:absolute;top:-.3rem;left:.8rem;color:var(--c-accent-light);opacity:.3;line-height:1}
 
-/* CV SECTION */
+/* CV SECTION (NEW FULL PAGE SECTION) */
 .cv-page{background:var(--c-bg-alt); padding-top:4rem; padding-bottom:4rem;}
 .cv-page h2{margin-bottom: 2.5rem;}
 .cv-content h4{font-size:1rem;font-weight:500;color:var(--c-text);margin:2rem 0 1rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--c-border);padding-bottom:.5rem;}
@@ -215,7 +215,7 @@ ul{list-style:none}
 .phil-card p{font-size:1rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
-/* Updated to contain to avoid cropping issues */
+/* Updated to standard background positioning to avoid zooming issues while keeping cover and your colors/gradients */
 .online{background: linear-gradient(rgba(74,4,4,0.85), rgba(74,4,4,0.85)), url('https://raw.githubusercontent.com/agelmet/pap/refs/heads/main/recree.jpg') center right / contain no-repeat var(--c-burgundy); color:var(--c-bg);position:relative;overflow:hidden; padding-top: clamp(4.5rem, 12vw, 8rem); padding-bottom: 2rem; padding-left: clamp(1.2rem, 5vw, 4rem); padding-right: clamp(1.2rem, 5vw, 4rem);}
 .online::before{content:'';position:absolute;top:-40%;right:-10%;width:500px;height:500px;opacity:.08;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M10,50 Q25,40 40,50 T70,50 T100,50" stroke="%23D9A999" fill="none" stroke-width="0.5"/><text x="90" y="45" font-family="serif" font-size="20" fill="%23D9A999">Ψ</text><path d="M90,45 Q85,60 70,65 T40,60 T10,55" stroke="%23D9A999" fill="none" stroke-width="0.5"/><path d="M10,55 Q12,50 15,55 Q18,60 15,65 T10,65 Z" stroke="%23D9A999" fill="%23D9A999"/></svg>');background-size:contain;background-position:center;background-repeat:no-repeat}
 .online-grid{display:grid;grid-template-columns:1fr;gap:2rem;position:relative;z-index:2}
@@ -327,6 +327,7 @@ ul{list-style:none}
 .contact-cta-btn svg{width:15px;height:15px}
 .contact-info{display:flex;flex-direction:column;gap:1.8rem}
 .contact-item{display:flex;gap:1.2rem;align-items:center}
+/* Make icons clickable by keeping them structurally sound and responsive on hover */
 .contact-item-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0; overflow:hidden; color:inherit; cursor:pointer; transition:all .3s var(--ease-out-expo);}
 .contact-item-icon:hover{border-color:var(--c-accent-light); background:rgba(250,248,245,.05);}
 .contact-item-icon svg{width:14px;height:14px;stroke:var(--c-accent-light);stroke-width:1.5}
@@ -334,6 +335,11 @@ ul{list-style:none}
 .contact-item-value{font-size:.95rem;font-weight:300;color:rgba(250,248,245,.85);line-height:1.6}
 .contact-item-value a{color:rgba(250,248,245,.85);transition:color .3s}
 .contact-item-value a:hover{color:var(--c-accent-light)}
+.contact-socials{display:flex;gap:.8rem;margin-top:.8rem}
+.contact-socials a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease-out-expo); overflow:hidden;}
+.contact-socials a:hover{border-color:var(--c-accent);background:var(--c-accent)}
+.contact-socials a svg{width:14px;height:14px;fill:rgba(250,248,245,.6)}
+.contact-socials a:hover svg{fill:var(--c-white)}
 .contact-map{margin-top:2rem;height:250px;border:1px solid rgba(250,248,245,.1);position:relative;z-index:2}
 .contact-map iframe{width:100%;height:100%;border:0;}
 
@@ -396,7 +402,7 @@ ul{list-style:none}
   .section{padding:clamp(2.5rem,8vw,4rem) 1.2rem}
   .section-title{font-size:clamp(1.3rem,5vw,2.0rem);line-height:1.25}
   .about-quote{font-size:.95rem;padding:1rem 1.2rem}
-  .about-text p{font-size:.85rem}
+  .about-text p{font-size:.82rem}
   .about-text p:first-of-type::first-letter{font-size:2.4rem}
   .cv-page h2{margin-bottom:1.5rem;}
   .cv-content h4{font-size: .9rem;}
@@ -415,7 +421,7 @@ ul{list-style:none}
   .service-item{gap:1rem;padding:1.5rem 0}
   .service-num{font-size:1.3rem;min-width:30px}
   .service-info h3{font-size:1rem}
-  .online{background-size: contain;} /* Ensure image scales properly on mobile */
+  .online{background-size: 80% auto;} /* Ensure image scales properly on mobile */
   .divider-h{font-size:clamp(1.1rem,3.5vw,1.5rem);line-height:1.5}
   .space-gallery{grid-template-columns:1fr 1fr;gap:.6rem}
   /* Exact size for perfectly contained 1 by 1 view on mobile without cropping */
@@ -444,6 +450,8 @@ ul{list-style:none}
 <div class="loader-inner">
 <div class="loader-name" data-el="gr">Αγγελική<span class="straight-dash">-</span>Ελευθερία Ι. Παπασαραντοπούλου</div>
 <div class="loader-name" data-el="en" style="display:none">Angeliki<span class="straight-dash">-</span>Eleftheria I. Papasarantopoulou</div>
+<div class="loader-title" data-el="gr">Ψυχολόγος</div>
+<div class="loader-title" data-el="en" style="display:none">Psychologist</div>
 <div class="loader-line"></div>
 </div>
 </div>
@@ -454,8 +462,6 @@ ul{list-style:none}
   <div class="nav-brand-text">
     <div class="nav-brand-name" data-el="gr">Αγγελική<span class="straight-dash">-</span>Ελευθερία Ι. Παπασαραντοπούλου</div>
     <div class="nav-brand-name" data-el="en" style="display:none">Angeliki<span class="straight-dash">-</span>Eleftheria I. Papasarantopoulou</div>
-    <div class="nav-brand-title" data-el="gr">Ψυχολόγος</div>
-    <div class="nav-brand-title" data-el="en" style="display:none">Psychologist</div>
   </div>
 </a>
 <div class="nav-right">
@@ -987,8 +993,6 @@ ul{list-style:none}
 </div>
 
 </div>
-<div class="faq-closing-quote reveal reveal-delay-1" data-el="gr">«Μερικές φορές, το πιο γενναίο πράγμα είναι να μιλήσεις. Και η θεραπεία αρχίζει όταν μιλάς σε κάποιον που σε ακούει πραγματικά».</div>
-<div class="faq-closing-quote reveal reveal-delay-1" data-el="en" style="display:none">"Sometimes, the bravest thing is to speak. And therapy begins when you talk to someone who truly listens to you."</div>
 </div>
 </div>
 </section>
@@ -1180,7 +1184,7 @@ ul{list-style:none}
 <div class="review-card">
 <div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
 <div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
-<div class="review-text" data-el="gr">Είμαι πραγματικά ευγνώμων που γνώρισα την Αγγελική. Ήρθε στη ζωή μου σε μία από τις δυσκολότερες περιόδους της ζωής μου, όταν ήμουν πνιγμένος μέσα στα προβλήματα και τα συναισθήματα μου. Με βοήθησε να πιστέψω ξανά στις δυνατότητες μου και να ξεπεράσω πράγματα που ούτε εγώ ο ίδιος πίστευα ποτέ ότι θα κατάφερνα. Η Αγγελική είναι ένας γλυκύτατος άνθρωπος που αγαπά πραγματικά αυτό που κάνει και αυτό φαίνεται σε κάθε συνεδρία. Εκπέμπει μια απίστευτη ζεστασιά και σου εμπνέει εμπιστοσύνη από την πρώτη στιγμή κάνοντας σε να νιώθεις άνετα και να μπορείς να ανοιχτείς χωρίς κανέναν φόβο. Είναι άψογη επαγγελματίας, αλλά πάνω απ’όλα είναι ένας πολύ καλός και πολύ φωτεινός άνθρωπος. Αυτό αποτυπώνεται σε κάθε συνεδρία και δίνει στη θεραπεία μια πολύ όμορφη ενέργεια που κάνει τη διαδικασία τόσο ξεχωριστή. Η παρουσία της μου έχει αλλάξει την ζωή.</div>
+<div class="review-text" data-el="gr">Είμαι πραγματικά ευγνώμων που γνώρισα την Αγγελική. Ήρθε στη ζωή μου σε μία από τις δυσκολότερες περιόδους της ζωής μου, όταν ήμουν πνιγμένος μέσα στα προβλήματα και τα συναισθήματα μου. Με βοήθησε να πιστέψω ξανά στις δυνατότητές μου και να ξεπεράσω πράγματα που ούτε εγώ ο ίδιος πίστευα ποτέ ότι θα κατάφερνα. Η Αγγελική είναι ένας γλυκύτατος άνθρωπος που αγαπά πραγματικά αυτό που κάνει και αυτό φαίνεται σε κάθε συνεδρία. Εκπέμπει μια απίστευτη ζεστασιά και σου εμπνέει εμπιστοσύνη από την πρώτη στιγμή κάνοντας σε να νιώθεις άνετα και να μπορείς να ανοιχτείς χωρίς κανέναν φόβο. Είναι άψογη επαγγελματίας, αλλά πάνω απ’όλα είναι ένας πολύ καλός και πολύ φωτεινός άνθρωπος. Αυτό αποτυπώνεται σε κάθε συνεδρία και δίνει στη θεραπεία μια πολύ όμορφη ενέργεια που κάνει τη διαδικασία τόσο ξεχωριστή. Η παρουσία της μου έχει αλλάξει την ζωή.</div>
 <div class="review-text" data-el="en" style="display:none">I am truly grateful to have met Angeliki. She came into my life during one of the hardest periods, when I was drowning in problems and my emotions. She helped me believe in my potential again and overcome things I never thought I could. Angeliki is an incredibly sweet person who truly loves what she does, and it shows in every session. She radiates an incredible warmth and inspires trust from the very first moment, making you feel comfortable and able to open up without any fear. She is a flawless professional, but above all, a very good and bright person. This is reflected in every session, giving therapy a beautiful energy that makes the process so special. Her presence has changed my life.</div>
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
@@ -1233,14 +1237,6 @@ ul{list-style:none}
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
 <div class="review-meta"><span data-el="gr">Κατερίνα Κ</span><span data-el="en" style="display:none">Katerina K</span></div>
-</div>
-
-<div class="review-card">
-<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
-<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
-<div class="review-text" data-el="gr">Εξαιρετική επαγγελματίας! Πλήρως καταρτισμένη, χαμογελαστή και ευγενέστατη! Τη συστήνω ανεπιφύλακτα!</div>
-<div class="review-text" data-el="en" style="display:none">Excellent professional! Fully qualified, smiling, and extremely polite! I highly recommend her!</div>
-<div class="review-meta"><span data-el="gr">Eleanna Spyropoulou</span><span data-el="en" style="display:none">Eleanna Spyropoulou</span></div>
 </div>
 
 <div class="review-card">
@@ -1339,12 +1335,12 @@ ul{list-style:none}
     </div>
   </div>
   <div class="contact-item reveal reveal-delay-3">
-    <a href="https://maps.app.goo.gl/dYxM1Ea4Y97R2nC36" target="_blank" rel="noopener" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
+    <a href="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα" target="_blank" rel="noopener" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
     <div>
       <div class="contact-item-label" data-el="gr">Διεύθυνση</div>
       <div class="contact-item-label" data-el="en" style="display:none">Address</div>
-      <div class="contact-item-value" data-el="gr"><a href="https://maps.app.goo.gl/dYxM1Ea4Y97R2nC36" target="_blank" rel="noopener">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αθήνα</a></div>
-      <div class="contact-item-value" data-el="en" style="display:none"><a href="https://maps.app.goo.gl/dYxM1Ea4Y97R2nC36" target="_blank" rel="noopener">132 Alexandras Avenue, Gkyzi, Athens</a></div>
+      <div class="contact-item-value" data-el="gr"><a href="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα" target="_blank" rel="noopener">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αθήνα</a></div>
+      <div class="contact-item-value" data-el="en" style="display:none"><a href="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα" target="_blank" rel="noopener">132 Alexandras Avenue, Gkyzi, Athens</a></div>
     </div>
   </div>
   
@@ -1370,7 +1366,7 @@ ul{list-style:none}
 </div>
 </div>
 <div class="contact-map reveal reveal-delay-4">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3144.6067759844415!2d23.7495046!3d37.9904207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1a2b535d452fb%3A0xc3311dbbf3f5c7fa!2zTGVvZi4gQWxleGFuZHJhcyAxMzIsIEF0aGluYSAxMTQgNzE!5e0!3m2!1sen!2sgr!4v1714574921609!5m2!1sen!2sgr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </section>
