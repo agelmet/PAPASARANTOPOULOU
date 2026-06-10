@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Αγγελική-Ελευθερία Ι. Παπασαραντοπούλου | Ψυχολόγος</title>
 <meta name="description" content="Ψυχολόγος με εξειδίκευση στην Συμβουλευτική και την Ψυχοθεραπεία. Ένας ζεστός και ασφαλής χώρος, όπου μπορείς να είσαι ο εαυτός σου.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M10,50 Q30,30 50,60 T90,40' fill='none' stroke='%234A0404' stroke-width='4'/><text x='50' y='76' font-family='serif' font-size='95' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><path d='M5,50 Q30,20 50,60 T95,40' fill='none' stroke='%234A0404' stroke-width='4'/><text x='50' y='82' font-family='serif' font-size='105' text-anchor='middle' fill='%234A0404'>Ψ</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@ ul{list-style:none}
 .loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
 .loader-inner{text-align:center}
 .loader-name{font-family:var(--font-display);font-size:clamp(1.4rem,2.8vw,2.2rem);font-weight:300;letter-spacing:.15em;color:var(--c-text);opacity:0;animation:loaderFade 1.2s var(--ease-out-expo) forwards;text-transform:uppercase}
-.loader-title{font-family:var(--font-body);font-size:clamp(.95rem,1.2vw,1.1rem);font-weight:300;letter-spacing:.3em;text-transform:uppercase;color:var(--c-text-muted);opacity:0;animation:loaderFade 1s .4s var(--ease-out-expo) forwards;margin-top:.6rem}
+.loader-title{font-family:var(--font-body);font-size:1.05rem;font-weight:300;letter-spacing:.3em;text-transform:uppercase;color:var(--c-text-muted);opacity:0;animation:loaderFade 1s .4s var(--ease-out-expo) forwards;margin-top:.6rem}
 .loader-line{width:60px;height:1px;background:var(--c-accent);margin:1.2rem auto 0;transform:scaleX(0);animation:loaderLine 1.2s .3s var(--ease-out-expo) forwards}
 @keyframes loaderFade{to{opacity:1}}
 @keyframes loaderLine{to{transform:scaleX(1)}}
@@ -51,26 +51,25 @@ ul{list-style:none}
 .nav-brand-name, .nav-brand-title, .nav-links a {color: var(--c-white); transition: color 0.3s;}
 .nav-hamburger span {background: var(--c-white);}
 .nav-brand{cursor:pointer;display:flex;align-items:center;gap:.8rem}
-/* Enhanced transparent logo blending with a larger drop shadow */
 .nav-brand-logo{width:85px;height:85px;object-fit:contain;flex-shrink:0;transition:all .3s; mix-blend-mode: multiply; background: radial-gradient(circle, rgba(255,255,255,0.95) 35%, rgba(255,255,255,0.7) 65%, transparent 85%); filter: drop-shadow(0 0 15px rgba(255,255,255,1)); border-radius: 50%; padding: 2px;}
 .nav.scrolled .nav-brand-logo {background: transparent; filter: none;}
-/* Text turning black on scroll - using the original smaller sizes */
-.nav-brand-name{font-family:var(--font-display);font-size:.95rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--c-white);line-height:1.2;transition:color .3s;}
-.nav-brand-title{font-family:var(--font-body);font-size:.55rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-top:2px;transition:color .3s;}
+/* Text turning black on scroll */
+.nav-brand-name{font-family:var(--font-display);font-size:1.3rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--c-white);line-height:1.2;transition:color .3s;}
+.nav-brand-title{font-family:var(--font-body);font-size:1.05rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-top:2px;transition:color .3s;}
 .nav.scrolled .nav-brand-name{color:var(--c-text);}
 .nav.scrolled .nav-brand-title{color:var(--c-text-muted);}
 
 .nav-right{display:flex;align-items:center;gap:2rem}
 .nav-links{display:flex;align-items:center;gap:2rem}
-.nav-links a{font-size:.65rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--c-text-soft);transition:color .3s;position:relative}
+.nav-links a{font-size:1.05rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:var(--c-text-soft);transition:color .3s;position:relative}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--c-accent);transition:width .4s var(--ease-out-expo)}
 .nav-links a:hover{color:var(--c-text)}
 .nav-links a:hover::after{width:100%}
 
-/* Buttons in black state universally so they show properly against the light right-side background */
-.nav-cta{font-size:.6rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;border:1px solid var(--c-text);color:var(--c-text);transition:all .4s var(--ease-out-expo)}
+/* Buttons in black state universally */
+.nav-cta{font-size:1.05rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;padding:.6rem 1.5rem;border:1px solid var(--c-text);color:var(--c-text);transition:all .4s var(--ease-out-expo)}
 .nav-cta:hover{background:var(--c-text);color:var(--c-bg)}
-.nav-lang{font-size:.6rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .8rem;border:1px solid var(--c-border-strong);color:var(--c-text-soft);cursor:pointer;transition:all .3s;background:transparent;border-radius:2px}
+.nav-lang{font-size:1.05rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .8rem;border:1px solid var(--c-border-strong);color:var(--c-text-soft);cursor:pointer;transition:all .3s;background:transparent;border-radius:2px}
 .nav-lang:hover{border-color:var(--c-accent);color:var(--c-accent)}
 
 /* Scrolled Nav Styles */
@@ -86,7 +85,7 @@ ul{list-style:none}
 .mobile-menu{position:fixed;inset:0;z-index:999;background:var(--c-bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.8rem;opacity:0;visibility:hidden;transition:all .5s var(--ease-out-expo)}
 .mobile-menu.active{opacity:1;visibility:visible}
 .mobile-menu a{font-family:var(--font-display);font-size:1.6rem;font-weight:400;letter-spacing:.06em;color:var(--c-text)}
-.mobile-menu .mob-lang{font-size:.75rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.2rem;border:1px solid var(--c-border-strong);color:var(--c-text-soft);margin-top:1rem;cursor:pointer;background:transparent}
+.mobile-menu .mob-lang{font-size:1.05rem;font-weight:400;letter-spacing:.15em;text-transform:uppercase;padding:.6rem 1.2rem;border:1px solid var(--c-border-strong);color:var(--c-text-soft);margin-top:1rem;cursor:pointer;background:transparent}
 
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;background-color:var(--c-bg)}
@@ -95,17 +94,16 @@ ul{list-style:none}
 /* Shadow directly behind text on the right */
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to left,rgba(250,248,245,1) 0%,rgba(250,248,245,0.85) 45%,rgba(250,248,245,0) 75%)}
 .hero-content{position:relative;z-index:2;width:100%;max-width:1400px;margin:0 auto;padding:0 4rem;display:flex;justify-content:flex-end}
-.hero-text{max-width:700px;text-align:right}
-/* Reduced font size and applied italic for the main hero heading */
-.hero-h1{font-family:var(--font-display);font-size:clamp(1.3rem,3.2vw,2.2rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
+.hero-text{max-width:850px;text-align:right}
+.hero-h1{font-family:var(--font-display);font-size:clamp(1.5rem,3.2vw,2.4rem);font-style:italic;font-weight:300;line-height:1.3;color:var(--c-text);margin-bottom:1.5rem;opacity:0;animation:heroReveal 1.2s 1.4s var(--ease-out-expo) forwards}
 .hero-h1 span.accent{color:var(--c-accent);font-style:italic}
-.hero-sub{font-size:.95rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:2.5rem;opacity:0;animation:heroReveal 1.2s 1.6s var(--ease-out-expo) forwards}
-.hero-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:.85rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo);opacity:0;animation:heroReveal 1s 1.8s var(--ease-out-expo) forwards}
+.hero-sub{font-size:1.15rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:2.5rem;opacity:0;animation:heroReveal 1.2s 1.6s var(--ease-out-expo) forwards}
+.hero-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:1.05rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo);opacity:0;animation:heroReveal 1s 1.8s var(--ease-out-expo) forwards}
 .hero-btn:hover{background:var(--c-accent-dark);transform:translateY(-2px);box-shadow:0 10px 30px rgba(196,130,110,.3)}
 .hero-btn svg{width:16px;height:16px;transition:transform .3s}
 .hero-btn:hover svg{transform:translateX(4px)}
 .hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:.6rem;opacity:0;animation:heroReveal 1s 2.2s var(--ease-out-expo) forwards}
-.hero-scroll span{font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--c-text-muted)}
+.hero-scroll span{font-size:1.05rem;letter-spacing:.25em;text-transform:uppercase;color:var(--c-text-muted)}
 .hero-scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--c-accent),transparent);animation:scrollPulse 2s infinite}
 @keyframes heroReveal{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 @keyframes scrollPulse{0%,100%{opacity:.3}50%{opacity:1}}
@@ -113,16 +111,16 @@ ul{list-style:none}
 /* MARQUEE */
 .marquee{padding:1.3rem 0;background:var(--c-burgundy);overflow:hidden}
 .marquee-track{display:flex;animation:marquee 35s linear infinite;width:max-content}
-.marquee-item{font-family:var(--font-display);font-size:.9rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--c-bg);white-space:nowrap;padding:0 1.8rem;display:flex;align-items:center;gap:1.8rem}
-.marquee-item::after{content:'✦';font-size:.6rem;color:var(--c-accent-light)}
+.marquee-item{font-family:var(--font-display);font-size:1.15rem;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:var(--c-bg);white-space:nowrap;padding:0 1.8rem;display:flex;align-items:center;gap:1.8rem}
+.marquee-item::after{content:'✦';font-size:1.05rem;color:var(--c-accent-light)}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* SECTIONS */
 .section{padding:clamp(3.5rem,10vw,7rem) clamp(1.2rem,5vw,4rem)}
 .section-inner{max-width:1200px;margin:0 auto}
-.section-tag{font-size:.85rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--c-accent);margin-bottom:1rem;display:flex;align-items:center;gap:.8rem}
+.section-tag{font-size:1.05rem;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--c-accent);margin-bottom:1rem;display:flex;align-items:center;gap:.8rem}
 .section-tag::before{content:'';width:30px;height:1px;background:var(--c-accent)}
-.section-title{font-family:var(--font-display);font-size:clamp(1.6rem,4vw,3.0rem);font-weight:300;line-height:1.2;color:var(--c-text);margin-bottom:1.5rem}
+.section-title{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,3.2rem);font-weight:300;line-height:1.2;color:var(--c-text);margin-bottom:1.5rem}
 .section-title .accent{color:var(--c-accent);font-style:normal}
 
 /* ABOUT */
@@ -138,22 +136,22 @@ ul{list-style:none}
 .about-image:hover img{transform:scale(1.04)}
 .about-image-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(196,130,110,.1) 0%,transparent 50%);z-index:1;pointer-events:none;mix-blend-mode:multiply}
 .about-image-caption{position:absolute;bottom:0;left:0;right:0;padding:1.5rem;background:linear-gradient(to top,rgba(42,34,32,.75),transparent);z-index:2}
-.about-image-caption span{font-family:var(--font-display);font-size:.85rem;letter-spacing:.15em;color:var(--c-accent-light);text-transform:uppercase}
+.about-image-caption span{font-family:var(--font-display);font-size:1.05rem;letter-spacing:.15em;color:var(--c-accent-light);text-transform:uppercase}
 .about-content{display:flex;flex-direction:column;justify-content:center}
 .about-content .section-tag{margin-bottom:.8rem}
 .about-content .section-title{font-kerning:none;font-feature-settings:"kern" 0;}
 .about-text p{font-size:1.05rem;font-weight:300;line-height:1.85;color:var(--c-text-soft);margin-bottom:1.1rem}
 .about-text p:first-of-type::first-letter{font-family:var(--font-display);font-size:2.8rem;float:left;line-height:1;margin-right:.4rem;margin-top:.12rem;color:var(--c-accent);font-weight:400}
-.about-quote{font-family:var(--font-display);font-size:clamp(1rem,1.8vw,1.15rem);font-weight:300;line-height:1.7;color:var(--c-text);margin:1.5rem 0 0;padding:1.2rem 1.5rem;border-left:2px solid var(--c-accent-light);background:var(--c-bg-alt);position:relative}
+.about-quote{font-family:var(--font-display);font-size:clamp(1.15rem,1.8vw,1.3rem);font-weight:300;line-height:1.7;color:var(--c-text);margin:1.5rem 0 0;padding:1.2rem 1.5rem;border-left:2px solid var(--c-accent-light);background:var(--c-bg-alt);position:relative}
 .about-quote::before{content:'\201C';font-family:var(--font-display);font-size:4rem;position:absolute;top:-.3rem;left:.8rem;color:var(--c-accent-light);opacity:.3;line-height:1}
 
 /* CV SECTION (NEW FULL PAGE SECTION) */
 .cv-page{background:var(--c-bg-alt); padding-top:4rem; padding-bottom:4rem;}
 .cv-page h2{margin-bottom: 2.5rem;}
-.cv-content h4{font-size:1rem;font-weight:500;color:var(--c-text);margin:2rem 0 1rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--c-border);padding-bottom:.5rem;}
+.cv-content h4{font-size:1.15rem;font-weight:500;color:var(--c-text);margin:2rem 0 1rem;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--c-border);padding-bottom:.5rem;}
 .cv-content ul{list-style:none;padding-left:0;margin-bottom:1.5rem;}
-.cv-content ul li{position:relative;padding-left:1.5rem;font-size:1rem;font-weight:300;line-height:1.7;margin-bottom:.8rem;color:var(--c-text-soft);}
-.cv-content ul li::before{content:'✦';position:absolute;left:0;top:.15rem;font-size:.85rem;color:var(--c-accent-light);}
+.cv-content ul li{position:relative;padding-left:1.5rem;font-size:1.05rem;font-weight:300;line-height:1.7;margin-bottom:.8rem;color:var(--c-text-soft);}
+.cv-content ul li::before{content:'✦';position:absolute;left:0;top:.15rem;font-size:1.05rem;color:var(--c-accent-light);}
 .cv-content p{font-size:1.05rem;font-weight:300;color:var(--c-accent);margin-top:1.5rem;}
 
 @keyframes floatGlow{0%,100%{transform:scale(1);opacity:.08}50%{transform:scale(1.3);opacity:.14}}
@@ -166,7 +164,7 @@ ul{list-style:none}
 .roadmap-step:nth-child(odd) .roadmap-step-empty{order:3}
 .roadmap-step:nth-child(even) .roadmap-step-content{order:3;text-align:left}
 .roadmap-step-center{display:flex;flex-direction:column;align-items:center;gap:0;position:relative}
-.roadmap-step-num{width:60px;height:60px;border-radius:50%;border:1.5px solid var(--c-accent-light);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.3rem;font-weight:300;color:var(--c-accent);background:var(--c-bg);position:relative;z-index:2;transition:all .5s var(--ease-out-expo)}
+.roadmap-step-num{width:60px;height:60px;border-radius:50%;border:1.5px solid var(--c-accent-light);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.5rem;font-weight:300;color:var(--c-accent);background:var(--c-bg);position:relative;z-index:2;transition:all .5s var(--ease-out-expo)}
 .roadmap-step-num::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px dashed var(--c-accent-light);opacity:0;transition:all .5s var(--ease-out-expo);animation:numPulse 3s ease-in-out infinite}
 .roadmap-step:hover .roadmap-step-num{background:var(--c-accent);color:var(--c-white);border-color:var(--c-accent);transform:scale(1.1);box-shadow:0 8px 30px rgba(196,130,110,.25)}
 .roadmap-step:hover .roadmap-step-num::after{opacity:.5;inset:-10px}
@@ -180,12 +178,12 @@ ul{list-style:none}
 .roadmap-trail-dot.animated{animation:trailMove 3s ease-in-out infinite}
 @keyframes trailMove{0%{opacity:0;offset-distance:0%}10%{opacity:1}90%{opacity:1}100%{opacity:0;offset-distance:100%}}
 
-.roadmap-step-content h3{font-family:var(--font-display);font-size:clamp(1.1rem,2vw,1.4rem);font-weight:400;color:var(--c-text);margin-bottom:.6rem;transition:color .3s}
+.roadmap-step-content h3{font-family:var(--font-display);font-size:clamp(1.25rem,2vw,1.6rem);font-weight:400;color:var(--c-text);margin-bottom:.6rem;transition:color .3s}
 .roadmap-step:hover .roadmap-step-content h3{color:var(--c-accent)}
-.roadmap-step-content p{font-size:.92rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);max-width:380px}
+.roadmap-step-content p{font-size:1.05rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);max-width:380px}
 .roadmap-step:nth-child(odd) .roadmap-step-content p{margin-left:auto}
 .roadmap-step-empty{min-width:0}
-.roadmap-subtitle{font-size:.98rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);max-width:600px;margin-top:.5rem}
+.roadmap-subtitle{font-size:1.15rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);max-width:600px;margin-top:.5rem}
 
 /* SERVICES */
 .services{background:var(--c-bg)}
@@ -194,9 +192,9 @@ ul{list-style:none}
 .service-item:first-child{border-top:1px solid var(--c-border)}
 .service-item:hover{padding-left:.8rem}
 .service-num{font-family:var(--font-display);font-size:1.6rem;font-weight:300;color:var(--c-accent-light);min-width:40px}
-.service-info h3{font-family:var(--font-display);font-size:clamp(1rem,2.2vw,1.4rem);font-weight:400;color:var(--c-text);margin-bottom:.3rem;transition:color .3s}
+.service-info h3{font-family:var(--font-display);font-size:clamp(1.25rem,2.2vw,1.6rem);font-weight:400;color:var(--c-text);margin-bottom:.3rem;transition:color .3s}
 .service-item:hover .service-info h3{color:var(--c-accent)}
-.service-info p{font-size:1rem;font-weight:300;color:var(--c-text-muted);max-height:0;overflow:hidden;transition:all .5s var(--ease-out-expo);line-height:1.75}
+.service-info p{font-size:1.05rem;font-weight:300;color:var(--c-text-muted);max-height:0;overflow:hidden;transition:all .5s var(--ease-out-expo);line-height:1.75}
 .service-item.active .service-info p{max-height:300px;margin-top:.7rem}
 .service-toggle{width:32px;height:32px;border-radius:50%;border:1px solid var(--c-border-strong);display:flex;align-items:center;justify-content:center;transition:all .4s var(--ease-out-expo);flex-shrink:0}
 .service-toggle svg{width:12px;height:12px;stroke:var(--c-text-soft);transition:transform .4s var(--ease-out-expo)}
@@ -211,8 +209,8 @@ ul{list-style:none}
 .phil-card:hover::before{transform:scaleX(1)}
 .phil-card:hover{border-color:var(--c-accent-light);transform:translateY(-3px);box-shadow:0 12px 35px rgba(42,34,32,.06)}
 .phil-num{font-family:var(--font-display);font-size:2.2rem;font-weight:300;color:var(--c-accent-light);opacity:.5;margin-bottom:.6rem}
-.phil-card h3{font-family:var(--font-display);font-size:1.1rem;font-weight:500;letter-spacing:.02em;margin-bottom:.6rem;color:var(--c-text)}
-.phil-card p{font-size:1rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
+.phil-card h3{font-family:var(--font-display);font-size:1.25rem;font-weight:500;letter-spacing:.02em;margin-bottom:.6rem;color:var(--c-text)}
+.phil-card p{font-size:1.05rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 
 /* ONLINE */
 /* Updated to standard background positioning to avoid zooming issues while keeping cover and your colors/gradients */
@@ -223,18 +221,18 @@ ul{list-style:none}
 .online-tag::before{background:var(--c-accent-light)}
 .online-title{color:var(--c-bg)}
 .online-title .accent{color:var(--c-accent-light)}
-.online-text{font-size:.95rem;font-weight:300;line-height:1.85;color:rgba(250,248,245,.8);margin-bottom:1.8rem}
+.online-text{font-size:1.05rem;font-weight:300;line-height:1.85;color:rgba(250,248,245,.8);margin-bottom:1.8rem}
 .online-features{display:grid;grid-template-columns:1fr;gap:.8rem; margin-bottom:1.5rem}
-.online-feature{display:flex;align-items:center;gap:.8rem;font-size:.95rem;font-weight:300;color:rgba(250,248,245,.9)}
+.online-feature{display:flex;align-items:center;gap:.8rem;font-size:1.05rem;font-weight:300;color:rgba(250,248,245,.9)}
 .online-feature svg{width:18px;height:18px;stroke:var(--c-accent-light);flex-shrink:0}
 
 /* DIVIDER */
 /* Adjusted top padding to reduce the gap */
 .divider{position:relative;padding-top: 1.5rem; padding-bottom: clamp(3rem,8vw,5rem); padding-left: clamp(1.5rem,5vw,4rem); padding-right: clamp(1.5rem,5vw,4rem); overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--c-burgundy)}
 .divider-text{text-align:center;position:relative;z-index:2;max-width:700px}
-.divider-tag{font-size:.85rem;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent-light);margin-bottom:1rem}
-.divider-h{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-white);line-height:1.5;font-style:italic;}
-.divider-author{font-size:.85rem;font-weight:300;color:rgba(250,248,245,.6);margin-top:.8rem;letter-spacing:.1em}
+.divider-tag{font-size:1.05rem;letter-spacing:.3em;text-transform:uppercase;color:var(--c-accent-light);margin-bottom:1rem}
+.divider-h{font-family:var(--font-display);font-size:1.3rem;font-weight:300;color:var(--c-white);line-height:1.5;font-style:italic;}
+.divider-author{font-size:1.05rem;font-weight:300;color:rgba(250,248,245,.6);margin-top:.8rem;letter-spacing:.1em}
 
 /* SPACE */
 .space{background:var(--c-bg)}
@@ -252,41 +250,42 @@ ul{list-style:none}
 .faq{background:var(--c-bg-alt);position:relative}
 .faq-grid{display:grid;grid-template-columns:.8fr 1fr;gap:3.5rem;align-items:start}
 .faq-intro{position:sticky;top:7rem}
-.faq-intro p{font-size:.92rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-top:.5rem}
+.faq-intro p{font-size:1.05rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-top:.5rem}
 .faq-item{border-bottom:1px solid var(--c-border-strong);overflow:hidden}
 .faq-q{padding:1.3rem 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:1.2rem}
-/* Enhanced Font Size and Weight for FAQ Questions */
-.faq-q h3{font-family:var(--font-display);font-size:1.15rem;font-weight:600;color:var(--c-text);transition:color .3s}
+/* Updated FAQ Questions per user request: Removed bold, increased font size */
+.faq-q h3{font-family:var(--font-display);font-size:1.25rem;font-weight:400;color:var(--c-text);transition:color .3s}
 .faq-q:hover h3{color:var(--c-accent)}
-.faq-q-icon{width:26px;height:26px;border-radius:50%;border:1px solid var(--c-border-strong);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease-out-expo);font-size:.75rem;color:var(--c-text-soft)}
+.faq-q-icon{width:26px;height:26px;border-radius:50%;border:1px solid var(--c-border-strong);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .4s var(--ease-out-expo);font-size:1.05rem;color:var(--c-text-soft)}
 .faq-item.active .faq-q-icon{background:var(--c-accent);border-color:var(--c-accent);color:var(--c-white);transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .5s var(--ease-out-expo)}
-.faq-a-inner{padding:0 0 1.3rem;font-size:.92rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
+.faq-a-inner{padding:0 0 1.3rem;font-size:1.05rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
 .faq-closing-quote{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-accent);text-align:center;margin-top:3.5rem;grid-column:1/-1;line-height:1.5;font-style:italic;}
 
 /* GLOSSARY */
 .glossary{background:var(--c-bg);border-top:1px solid var(--c-border)}
 .glossary-intro{max-width:700px;margin-bottom:2.5rem}
-.glossary-intro p{font-size:.95rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-top:.5rem}
+.glossary-intro p{font-size:1.05rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-top:.5rem}
 .glossary-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
 .glossary-card{padding:2rem;background:var(--c-bg-alt);border:1px solid transparent;position:relative;overflow:hidden;transition:all .5s var(--ease-out-expo)}
 .glossary-card::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(to right,var(--c-accent),var(--c-accent-light));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease-out-expo)}
 .glossary-card:hover{border-color:var(--c-border-strong);transform:translateY(-2px);box-shadow:0 10px 30px rgba(42,34,32,.05)}
 .glossary-card:hover::after{transform:scaleX(1)}
-.glossary-card h4{font-family:var(--font-display);font-size:1.05rem;font-weight:500;color:var(--c-accent);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
+/* Alignment of Glossary items to perfectly match Phil Cards */
+.glossary-card h4{font-family:var(--font-display);font-size:1.25rem;font-weight:500;color:var(--c-accent);margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem}
 .glossary-card h4::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--c-accent-light);flex-shrink:0;opacity:.6}
-.glossary-card p{font-size:.88rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
-.glossary-footer-quote{grid-column:1/-1;text-align:center;margin-top:3rem;font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:var(--c-text);line-height:1.5}
-/* Quote Attribution Font Size Increased */
-.glossary-footer-quote span{display:block;font-family:var(--font-body);font-size:.85rem;color:var(--c-text-muted);margin-top:.8rem;letter-spacing:.05em; font-weight: 400;}
+.glossary-card p{font-size:1.05rem;font-weight:300;line-height:1.8;color:var(--c-text-soft)}
+.glossary-footer-quote{grid-column:1/-1;text-align:center;margin-top:3rem;font-family:var(--font-display);font-size:1.3rem;font-weight:300;color:var(--c-text);line-height:1.5}
+/* Quote Attribution Font Size Increased explicitly */
+.glossary-footer-quote span{display:block;font-family:var(--font-body);font-size:1.05rem;color:var(--c-text-muted);margin-top:.8rem;letter-spacing:.05em; font-weight: 400;}
 
 /* REVIEWS */
 .reviews{background:var(--c-bg-alt);overflow:hidden}
 .reviews-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:2.5rem;flex-wrap:wrap;gap:1.2rem}
 .reviews-stats{display:flex;align-items:center;gap:1.2rem}
 .reviews-score{font-family:var(--font-display);font-size:2.8rem;font-weight:300;color:var(--c-text)}
-.reviews-stars{color:var(--c-accent);font-size:.85rem;letter-spacing:2px}
-.reviews-count{font-size:.85rem;color:var(--c-text-muted);font-weight:300}
+.reviews-stars{color:var(--c-accent);font-size:1.05rem;letter-spacing:2px}
+.reviews-count{font-size:1.05rem;color:var(--c-text-muted);font-weight:300}
 .reviews-track{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:.5rem}
 .reviews-track::-webkit-scrollbar{display:none}
 .review-card{min-width:340px;max-width:380px;scroll-snap-align:start;padding:1.8rem;background:var(--c-bg);border:1px solid var(--c-border);flex-shrink:0;transition:all .4s var(--ease-smooth)}
@@ -294,15 +293,15 @@ ul{list-style:none}
 .review-source{display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem}
 .review-source img{height:16px;width:auto;opacity:.6}
 .review-source svg{height:15px;width:auto;opacity:.6}
-.review-source-label{font-size:.85rem;color:var(--c-text-muted);font-weight:300}
+.review-source-label{font-size:1.05rem;color:var(--c-text-muted);font-weight:300}
 .review-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem}
 .review-rating{font-family:var(--font-display);font-size:1.3rem;font-weight:400;color:var(--c-accent)}
-.review-stars-static{font-size:.85rem;color:var(--c-accent);letter-spacing:1px}
-.review-text{font-size:.88rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:.8rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;transition:all .3s}
+.review-stars-static{font-size:1.05rem;color:var(--c-accent);letter-spacing:1px}
+.review-text{font-size:1.05rem;font-weight:300;line-height:1.8;color:var(--c-text-soft);margin-bottom:.8rem;display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;transition:all .3s}
 .review-card.expanded .review-text{-webkit-line-clamp:unset}
-.review-readmore{font-size:.85rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--c-accent);cursor:pointer;display:inline-block;margin-bottom:.8rem;border-bottom:1px solid transparent;transition:border-color .3s}
+.review-readmore{font-size:1.05rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--c-accent);cursor:pointer;display:inline-block;margin-bottom:.8rem;border-bottom:1px solid transparent;transition:border-color .3s}
 .review-readmore:hover{border-color:var(--c-accent)}
-.review-meta{font-size:.85rem;color:var(--c-text-muted);font-weight:300;display:flex;justify-content:space-between}
+.review-meta{font-size:1.05rem;color:var(--c-text-muted);font-weight:300;display:flex;justify-content:space-between}
 .reviews-nav{display:flex;gap:.6rem;margin-top:1.8rem;justify-content:center}
 .reviews-nav button{width:36px;height:36px;border-radius:50%;border:1px solid var(--c-border-strong);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease-out-expo)}
 .reviews-nav button:hover{background:var(--c-accent);border-color:var(--c-accent)}
@@ -310,7 +309,7 @@ ul{list-style:none}
 .reviews-nav button svg{width:14px;height:14px;stroke:var(--c-text-soft)}
 
 /* Custom Review Link Buttons */
-.review-btn{font-size:.85rem; padding:.8rem 1.5rem; border:1px solid var(--c-accent); color:var(--c-accent); border-radius:4px; display:inline-flex; align-items:center; gap:.5rem; text-transform:uppercase; letter-spacing:0.1em; transition:all 0.3s;}
+.review-btn{font-size:1.05rem; padding:.8rem 1.5rem; border:1px solid var(--c-accent); color:var(--c-accent); border-radius:4px; display:inline-flex; align-items:center; gap:.5rem; text-transform:uppercase; letter-spacing:0.1em; transition:all 0.3s;}
 .review-btn:hover{background:var(--c-accent); color:var(--c-white);}
 .review-btn svg{width:20px; height:20px; fill:currentColor;}
 .review-btn img{width:28px; height:28px; border-radius:50%; object-fit:contain; background:#fff; padding:2px;}
@@ -322,7 +321,7 @@ ul{list-style:none}
 .contact-left .section-tag{color:var(--c-accent-light)}
 .contact-left .section-tag::before{background:var(--c-accent-light)}
 .contact-quote{font-family:var(--font-display);font-size:1.2rem;font-weight:300;color:rgba(250,248,245,.6);margin-bottom:2rem;line-height:1.6}
-.contact-cta-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:.85rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:.9rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo)}
+.contact-cta-btn{display:inline-flex;align-items:center;gap:.8rem;font-size:1.05rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:.9rem 2.2rem;background:var(--c-accent);color:var(--c-white);transition:all .4s var(--ease-out-expo)}
 .contact-cta-btn:hover{background:var(--c-accent-dark);transform:translateY(-2px);box-shadow:0 10px 30px rgba(196,130,110,.3)}
 .contact-cta-btn svg{width:15px;height:15px}
 .contact-info{display:flex;flex-direction:column;gap:1.8rem}
@@ -331,28 +330,24 @@ ul{list-style:none}
 .contact-item-icon{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;flex-shrink:0; overflow:hidden; color:inherit; cursor:pointer; transition:all .3s var(--ease-out-expo);}
 .contact-item-icon:hover{border-color:var(--c-accent-light); background:rgba(250,248,245,.05);}
 .contact-item-icon svg{width:14px;height:14px;stroke:var(--c-accent-light);stroke-width:1.5}
-.contact-item-label{font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.4);margin-bottom:.25rem;display:flex;align-items:center;gap:0.5rem}
-.contact-item-value{font-size:.95rem;font-weight:300;color:rgba(250,248,245,.85);line-height:1.6}
+.contact-item-label{font-size:1.05rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(250,248,245,.4);margin-bottom:.25rem;display:flex;align-items:center;gap:0.5rem}
+.contact-item-value{font-size:1.05rem;font-weight:300;color:rgba(250,248,245,.85);line-height:1.6}
 .contact-item-value a{color:rgba(250,248,245,.85);transition:color .3s}
 .contact-item-value a:hover{color:var(--c-accent-light)}
-.contact-socials{display:flex;gap:.8rem;margin-top:.8rem}
-.contact-socials a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(250,248,245,.12);display:flex;align-items:center;justify-content:center;transition:all .3s var(--ease-out-expo); overflow:hidden;}
-.contact-socials a:hover{border-color:var(--c-accent);background:var(--c-accent)}
-.contact-socials a svg{width:14px;height:14px;fill:rgba(250,248,245,.6)}
-.contact-socials a:hover svg{fill:var(--c-white)}
 .contact-map{margin-top:2rem;height:250px;border:1px solid rgba(250,248,245,.1);position:relative;z-index:2}
+/* Valid map embed URL linking to the exact location */
 .contact-map iframe{width:100%;height:100%;border:0;}
 
 /* EMERGENCY */
 .emergency{background:var(--c-surface);padding:1.2rem clamp(1.2rem,5vw,4rem);text-align:center}
-.emergency p{font-size:.85rem;font-weight:300;color:var(--c-text-soft);line-height:1.8}
+.emergency p{font-size:1.05rem;font-weight:300;color:var(--c-text-soft);line-height:1.8}
 .emergency a{color:var(--c-burgundy);font-weight:400;border-bottom:1px solid var(--c-accent-light)}
 
 /* FOOTER */
 .footer{background:var(--c-burgundy);padding:1.5rem clamp(1.2rem,5vw,4rem);border-top:1px solid rgba(250,248,245,.06)}
 .footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem}
-.footer-copy{font-size:.85rem;color:rgba(250,248,245,.3);font-weight:300}
-.footer-credit{font-size:.85rem;color:rgba(250,248,245,.3);font-weight:300}
+.footer-copy{font-size:1.05rem;color:rgba(250,248,245,.3);font-weight:300}
+.footer-credit{font-size:1.05rem;color:rgba(250,248,245,.3);font-weight:300}
 .footer-credit a{color:var(--c-accent-light);transition:color .3s}
 .footer-credit a:hover{color:var(--c-accent)}
 
@@ -384,28 +379,28 @@ ul{list-style:none}
 @media(max-width:768px){
   .nav{padding:1rem 1.2rem;padding-top:env(safe-area-inset-top,.6rem)}
   .nav-brand-logo{width:60px;height:60px}
-  .nav-brand-name{font-size:.7rem;letter-spacing:.05em}
-  .nav-brand-title{font-size:.45rem;letter-spacing:.12em}
+  .nav-brand-name{font-size:.9rem;letter-spacing:.05em}
+  .nav-brand-title{font-size:.85rem;letter-spacing:.12em}
   .hero{min-height:100svh; background-color: var(--c-bg); align-items:flex-end;}
   .hero-bg img{object-fit:contain; object-position:top;}
   /* Mobile Gradient: Top-to-bottom fade to reveal text at bottom */
   .hero-bg::after{background:linear-gradient(to top, rgba(250,248,245,1) 0%, rgba(250,248,245,.95) 40%, rgba(250,248,245,0) 80%);}
   .hero-content{padding:0 1.5rem 3rem;padding-top:5rem;justify-content:flex-start;width:100%}
   .hero-text{text-align:left;max-width:100%}
-  .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:.55rem;letter-spacing:.25em}
+  .hero-tag{margin-bottom:1rem;margin-top:1rem;font-size:1.05rem;letter-spacing:.25em}
   /* Forced mobile hero text to be upright/normal */
   .hero-h1{font-size:clamp(1.4rem,4vw,1.8rem);line-height:1.3;margin-bottom:1.2rem;font-style:normal !important;}
   .hero-h1 span.accent{font-style:normal !important;}
-  .hero-sub{font-size:.78rem;line-height:1.7;margin-bottom:2rem}
-  .hero-btn{font-size:.58rem;padding:.8rem 1.6rem;width:100%;justify-content:center}
+  .hero-sub{font-size:1.15rem;line-height:1.7;margin-bottom:2rem}
+  .hero-btn{font-size:1.05rem;padding:.8rem 1.6rem;width:100%;justify-content:center}
   .hero-scroll{bottom:1.2rem}
   .section{padding:clamp(2.5rem,8vw,4rem) 1.2rem}
   .section-title{font-size:clamp(1.3rem,5vw,2.0rem);line-height:1.25}
-  .about-quote{font-size:.95rem;padding:1rem 1.2rem}
-  .about-text p{font-size:.82rem}
+  .about-quote{font-size:1.15rem;padding:1rem 1.2rem}
+  .about-text p{font-size:1.05rem}
   .about-text p:first-of-type::first-letter{font-size:2.4rem}
   .cv-page h2{margin-bottom:1.5rem;}
-  .cv-content h4{font-size: .9rem;}
+  .cv-content h4{font-size: 1.15rem;}
   .roadmap-step{grid-template-columns:auto 1fr;gap:1.5rem}
   .roadmap-step:nth-child(odd) .roadmap-step-content{text-align:left}
   .roadmap-step:nth-child(odd) .roadmap-step-empty,.roadmap-step:nth-child(even) .roadmap-step-empty{display:none}
@@ -417,23 +412,23 @@ ul{list-style:none}
   .roadmap-trail svg{display:none}
   .roadmap-trail::after{content:'';position:absolute;left:23px;top:0;bottom:0;width:1px;border-left:2px dashed var(--c-accent-light);opacity:.25}
   .phil-card{padding:1.8rem}
-  .phil-card h3{font-size:1rem}
+  .phil-card h3{font-size:1.25rem}
   .service-item{gap:1rem;padding:1.5rem 0}
   .service-num{font-size:1.3rem;min-width:30px}
-  .service-info h3{font-size:1rem}
-  .online{background-size: 80% auto;} /* Ensure image scales properly on mobile */
+  .service-info h3{font-size:1.25rem}
+  .online{background-size: contain;} /* Ensure image scales properly on mobile */
   .divider-h{font-size:clamp(1.1rem,3.5vw,1.5rem);line-height:1.5}
   .space-gallery{grid-template-columns:1fr 1fr;gap:.6rem}
   /* Exact size for perfectly contained 1 by 1 view on mobile without cropping */
   .review-card{min-width:100%;max-width:100%;padding:1.5rem;flex: 0 0 100%;}
   .reviews-score{font-size:2.2rem}
-  .contact-quote{font-size:1.05rem}
-  /* Bolder, slightly larger FAQ questions on mobile */
-  .faq-q h3{font-size:1.05rem; font-weight:600;}
+  .contact-quote{font-size:1.15rem}
+  /* Adjusted mobile FAQ questions font size */
+  .faq-q h3{font-size:1.25rem; font-weight:400;}
   .faq-closing-quote{font-size:1.1rem;}
   /* Custom Quote Attribution Size on mobile */
-  .glossary-footer-quote span{font-size:.9rem;}
-  .marquee-item{font-size:.7rem;padding:0 1.2rem}
+  .glossary-footer-quote span{font-size:1.05rem;}
+  .marquee-item{font-size:1.05rem;padding:0 1.2rem}
   .glossary-grid{grid-template-columns:1fr}
 }
 
@@ -500,8 +495,8 @@ ul{list-style:none}
 <div class="hero-content">
 <div class="hero-text">
   
-  <h1 class="hero-h1" data-el="gr">Ό,τι κι αν αντιμετωπίζεις, δεν σε καθορίζει.<br><span class="accent">Μαζί, μπορούμε να το δούμε από μια άλλη οπτική.</span></h1>
-  <h1 class="hero-h1" data-el="en" style="display:none">Whatever you're facing, it doesn't define you.<br><span class="accent">Together, we can look at it from a different perspective.</span></h1>
+  <h1 class="hero-h1" data-el="gr">Ό,τι κι αν αντιμετωπίζεις, δεν σε καθορίζει.<br><span class="accent">Μαζί, μπορούμε να το δούμε από&nbsp;μια&nbsp;άλλη&nbsp;οπτική.</span></h1>
+  <h1 class="hero-h1" data-el="en" style="display:none">Whatever you're facing, it doesn't define you.<br><span class="accent">Together, we can look at it from a&nbsp;different&nbsp;perspective.</span></h1>
   
   <p class="hero-sub" data-el="gr">Εδώ θα βρεις έναν ζεστό και ασφαλή χώρο, όπου μπορείς να είσαι ο εαυτός σου.<br>Χωρίς επίκριση – με αποδοχή, κατανόηση και στήριξη σε όσα σε απασχολούν.</p>
   <p class="hero-sub" data-el="en" style="display:none">Here you will find a warm and safe space, where you can be yourself.<br>Without judgment – with acceptance, understanding, and support for whatever is on your mind.</p>
@@ -1184,7 +1179,7 @@ ul{list-style:none}
 <div class="review-card">
 <div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
 <div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
-<div class="review-text" data-el="gr">Είμαι πραγματικά ευγνώμων που γνώρισα την Αγγελική. Ήρθε στη ζωή μου σε μία από τις δυσκολότερες περιόδους της ζωής μου, όταν ήμουν πνιγμένος μέσα στα προβλήματα και τα συναισθήματα μου. Με βοήθησε να πιστέψω ξανά στις δυνατότητές μου και να ξεπεράσω πράγματα που ούτε εγώ ο ίδιος πίστευα ποτέ ότι θα κατάφερνα. Η Αγγελική είναι ένας γλυκύτατος άνθρωπος που αγαπά πραγματικά αυτό που κάνει και αυτό φαίνεται σε κάθε συνεδρία. Εκπέμπει μια απίστευτη ζεστασιά και σου εμπνέει εμπιστοσύνη από την πρώτη στιγμή κάνοντας σε να νιώθεις άνετα και να μπορείς να ανοιχτείς χωρίς κανέναν φόβο. Είναι άψογη επαγγελματίας, αλλά πάνω απ’όλα είναι ένας πολύ καλός και πολύ φωτεινός άνθρωπος. Αυτό αποτυπώνεται σε κάθε συνεδρία και δίνει στη θεραπεία μια πολύ όμορφη ενέργεια που κάνει τη διαδικασία τόσο ξεχωριστή. Η παρουσία της μου έχει αλλάξει την ζωή.</div>
+<div class="review-text" data-el="gr">Είμαι πραγματικά ευγνώμων που γνώρισα την Αγγελική. Ήρθε στη ζωή μου σε μία από τις δυσκολότερες περιόδους της ζωής μου, όταν ήμουν πνιγμένος μέσα στα προβλήματα και τα συναισθήματα μου. Με βοήθησε να πιστέψω ξανά στις δυνατότητες μου και να ξεπεράσω πράγματα που ούτε εγώ ο ίδιος πίστευα ποτέ ότι θα κατάφερνα. Η Αγγελική είναι ένας γλυκύτατος άνθρωπος που αγαπά πραγματικά αυτό που κάνει και αυτό φαίνεται σε κάθε συνεδρία. Εκπέμπει μια απίστευτη ζεστασιά και σου εμπνέει εμπιστοσύνη από την πρώτη στιγμή κάνοντας σε να νιώθεις άνετα και να μπορείς να ανοιχτείς χωρίς κανέναν φόβο. Είναι άψογη επαγγελματίας, αλλά πάνω απ’όλα είναι ένας πολύ καλός και πολύ φωτεινός άνθρωπος. Αυτό αποτυπώνεται σε κάθε συνεδρία και δίνει στη θεραπεία μια πολύ όμορφη ενέργεια που κάνει τη διαδικασία τόσο ξεχωριστή. Η παρουσία της μου έχει αλλάξει την ζωή.</div>
 <div class="review-text" data-el="en" style="display:none">I am truly grateful to have met Angeliki. She came into my life during one of the hardest periods, when I was drowning in problems and my emotions. She helped me believe in my potential again and overcome things I never thought I could. Angeliki is an incredibly sweet person who truly loves what she does, and it shows in every session. She radiates an incredible warmth and inspires trust from the very first moment, making you feel comfortable and able to open up without any fear. She is a flawless professional, but above all, a very good and bright person. This is reflected in every session, giving therapy a beautiful energy that makes the process so special. Her presence has changed my life.</div>
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
@@ -1212,31 +1207,19 @@ ul{list-style:none}
 <div class="review-card">
 <div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
 <div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
-<div class="review-text" data-el="gr">Η Αγγελική είναι μια από τις καλύτερες ψυχολόγους, και αισθάνομαι ευγνώμων που είχα την τύχη να την γνωρίσω. Εξαιρετική επιστήμονας με πάρα πολλές γνώσεις, γλυκός άνθρωπος, ευγενική, φιλική, προσηνής, με πολλή κατανόηση, σε κάνει αμέσως να αισθάνεσαι άνετα ό,τι και αν αντιμετωπίζεις. Και ο χώρος του γραφείου της είναι πολύ επιμελημένος και ζεστός. Σε δύσκολες στιγμές μου με βοήθησε πραγματικά. Σε όποιον αναζητά ψυχολόγο, ανεπιφύλακτα θα την σύστηνα!</div>
-<div class="review-text" data-el="en" style="display:none">Angeliki is one of the best psychologists, and I feel grateful to have had the luck to meet her. An excellent scientist with a vast amount of knowledge, a sweet person, polite, friendly, approachable, with a lot of understanding, she immediately makes you feel comfortable no matter what you are facing. Her office space is also very well curated and warm. During my difficult times, she truly helped me. To anyone looking for a psychologist, I would highly recommend her!</div>
-<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
-<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
-<div class="review-meta"><span data-el="gr">George Raps</span><span data-el="en" style="display:none">George Raps</span></div>
-</div>
-
-<div class="review-card">
-<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
-<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
-<div class="review-text" data-el="gr">Η Αγγελική είναι ένα ευγενέστατο, γλυκύτατο και γεμάτο καλοσύνη πλάσμα, που θα σε κερδίσει από την πρώτη συνεδρία. Είναι εξαιρετική επαγγελματίας, και πάνω από όλα άνθρωπος! Θα σκύψει με πραγματικό ενδιαφέρον και νοιάξιμο πάνω από τα θέματά σου.</div>
-<div class="review-text" data-el="en" style="display:none">Angeliki is an incredibly polite, sweet, and kind-hearted creature who will win you over from the first session. She is an excellent professional, and above all, a human being! She will look into your issues with genuine interest and care.</div>
-<span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
-<span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
-<div class="review-meta"><span data-el="gr">Dimitris</span><span data-el="en" style="display:none">Dimitris</span></div>
-</div>
-
-<div class="review-card">
-<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
-<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
 <div class="review-text" data-el="gr">Πλέον κάθε φορά που επισκέπτομαι το γραφείο της Αγγελικής, νιώθω πως πηγαίνω να μιλήσω με μία πολύ καλή μου φίλη. Μία φίλη όμως που δεν με κάνει ποτέ να νιώσω άβολα. Αντίθετα, εκτός απο εξαίρετη επαγγελματίας είναι ένας Άνθρωπος που με το ήθος και την ευγένεια του καταφέρνει να ανοίγει απαλά τα φύλλα της καρδιάς μου και με βοηθάει να διαβάζουμε μαζί τις πιο δύσκολες σελίδες και να βαδίζουμε με ασφάλεια στα πιο δυσπρόσιτα σημεία της ψυχής μου. Επίσης με βοηθάει να βγαίνω από το λαβύρινθο της υπαρξής μου και να μαθαίνω να γράφω από την αρχή τη δική μου ιστορία, να δίνω νόημα σε ό,τι κάνω, να γίνομαι ο άνθρωπος που πάντα ήθελα. Την ευχαριστώ πολύ που είναι συνοδοιπόρος μου σε αυτό το ατέρμονο ταξίδι προς τα μέσα. Μετά από κάθε συνεδρία νιώθω να με κατακλύζει εσωτερική γαλήνη, ανακούφιση, διαύγεια και χαρά σαν να γυρίζω ξανά πίσω σε μένα με ασφάλεια στο παντοτινό ολόδικό μου σπίτι!!! Θα την πρότεινα με χαρά σε όποιον είναι έτοιμος γι αυτό το ταξίδι της ψυχοθεραπείας!!!</div>
 <div class="review-text" data-el="en" style="display:none">Now, every time I visit Angeliki's office, I feel like I am going to talk to a very good friend of mine. But a friend who never makes me feel uncomfortable. On the contrary, aside from being an excellent professional, she is a Human being who, with her ethos and politeness, manages to gently open the leaves of my heart and helps us read the most difficult pages together, walking safely through the most inaccessible parts of my soul. She also helps me exit the labyrinth of my existence and learn to write my own story from the beginning, to give meaning to everything I do, to become the person I always wanted to be. I thank her so much for being my companion on this endless inward journey. After each session, I feel overwhelmed by inner peace, relief, clarity, and joy, as if I am returning to myself safely, in my own forever home!!! I would happily recommend her to anyone who is ready for this journey of psychotherapy!!!</div>
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="gr">Διαβάστε περισσότερα</span>
 <span class="review-readmore" onclick="toggleReview(event,this)" data-el="en" style="display:none">Read more</span>
 <div class="review-meta"><span data-el="gr">Κατερίνα Κ</span><span data-el="en" style="display:none">Katerina K</span></div>
+</div>
+
+<div class="review-card">
+<div class="review-source"><svg viewBox="0 0 24 24" width="18" height="18"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg><span class="review-source-label">Google</span></div>
+<div class="review-top"><span class="review-stars-static" style="font-size:.75rem">★★★★★</span></div>
+<div class="review-text" data-el="gr">Εξαιρετική επαγγελματίας! Πλήρως καταρτισμένη, χαμογελαστή και ευγενέστατη! Τη συστήνω ανεπιφύλακτα!</div>
+<div class="review-text" data-el="en" style="display:none">Excellent professional! Fully qualified, smiling, and extremely polite! I highly recommend her!</div>
+<div class="review-meta"><span data-el="gr">Eleanna Spyropoulou</span><span data-el="en" style="display:none">Eleanna Spyropoulou</span></div>
 </div>
 
 <div class="review-card">
@@ -1286,10 +1269,12 @@ ul{list-style:none}
    </a>
    
    <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou#review-section" target="_blank" rel="noopener" class="review-btn" data-el="gr">
-      <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="Doctoranytime" style="width:28px;height:28px;border-radius:50%;"> ΑΞΙΟΛΟΓΗΣΕΙΣ DOCTORANYTIME
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:28px; height:28px;"><path d="M13.5 7v10" /><circle cx="10.5" cy="14" r="3" /><circle cx="12" cy="12" r="10" /></svg>
+      ΑΞΙΟΛΟΓΗΣΕΙΣ DOCTORANYTIME
    </a>
    <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou#review-section" target="_blank" rel="noopener" class="review-btn" data-el="en" style="display:none">
-      <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="Doctoranytime" style="width:28px;height:28px;border-radius:50%;"> DOCTORANYTIME REVIEWS
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:28px; height:28px;"><path d="M13.5 7v10" /><circle cx="10.5" cy="14" r="3" /><circle cx="12" cy="12" r="10" /></svg>
+      DOCTORANYTIME REVIEWS
    </a>
 </div>
 
@@ -1335,12 +1320,12 @@ ul{list-style:none}
     </div>
   </div>
   <div class="contact-item reveal reveal-delay-3">
-    <a href="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα" target="_blank" rel="noopener" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
+    <a href="https://maps.google.com/maps?q=Leof.+Alexandras+132,+Athina+114+71&t=&z=15&ie=UTF8&iwloc=&output=embed" target="_blank" rel="noopener" class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></a>
     <div>
       <div class="contact-item-label" data-el="gr">Διεύθυνση</div>
       <div class="contact-item-label" data-el="en" style="display:none">Address</div>
-      <div class="contact-item-value" data-el="gr"><a href="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα" target="_blank" rel="noopener">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αθήνα</a></div>
-      <div class="contact-item-value" data-el="en" style="display:none"><a href="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα" target="_blank" rel="noopener">132 Alexandras Avenue, Gkyzi, Athens</a></div>
+      <div class="contact-item-value" data-el="gr"><a href="https://maps.google.com/maps?q=Leof.+Alexandras+132,+Athina+114+71&t=&z=15&ie=UTF8&iwloc=&output=embed" target="_blank" rel="noopener">Λεωφόρος Αλεξάνδρας 132, Γκύζη, Αθήνα</a></div>
+      <div class="contact-item-value" data-el="en" style="display:none"><a href="https://maps.google.com/maps?q=Leof.+Alexandras+132,+Athina+114+71&t=&z=15&ie=UTF8&iwloc=&output=embed" target="_blank" rel="noopener">132 Alexandras Avenue, Gkyzi, Athens</a></div>
     </div>
   </div>
   
@@ -1355,8 +1340,8 @@ ul{list-style:none}
   </div>
   
   <div class="contact-item reveal reveal-delay-4">
-    <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" class="contact-item-icon" style="border:none;">
-      <img src="https://raw.githubusercontent.com/agelmet/KARAZOLI/refs/heads/main/lgoodoc.jpg" alt="DoctorAnytime" style="width:100%; height:100%; object-fit:contain; border-radius:50%; background-color:#fff;">
+    <a href="https://www.doctoranytime.gr/d/Psychologos/aggeliki-eleutheria-papasarantopoulou" target="_blank" rel="noopener" class="contact-item-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13.5 7v10" /><circle cx="10.5" cy="14" r="3" /><circle cx="12" cy="12" r="10" /></svg>
     </a>
     <div>
       <div class="contact-item-label">Doctoranytime</div>
@@ -1366,7 +1351,7 @@ ul{list-style:none}
 </div>
 </div>
 <div class="contact-map reveal reveal-delay-4">
-  <iframe src="https://maps.google.com/maps?q=Λεωφόρος%20Αλεξάνδρας%20132,%20Γκύζη,%20Αθήνα&t=&z=16&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe src="https://maps.google.com/maps?q=Leof.+Alexandras+132,+Athina+114+71&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 </div>
 </section>
